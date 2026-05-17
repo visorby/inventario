@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Almacenes - Constructora Ríos Herrera</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <span class="text-primary">Ríos</span>
+                <span class="text-warning">Herrera</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="marcoDropdown" role="button" data-bs-toggle="dropdown">
+                            Marco Teórico
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="marcoDropdown">
+                            <li><a class="dropdown-item" href="marco-teorico.html#introduccion">Introducción</a></li>
+                            <li><a class="dropdown-item" href="marco-teorico.html#antecedentes">Antecedentes</a></li>
+                            <li><a class="dropdown-item" href="marco-teorico.html#planteamiento">Planteamiento del Problema</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="analisisDropdown" role="button" data-bs-toggle="dropdown">
+                            Análisis Estructurado
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="analisisDropdown">
+                            <li><a class="dropdown-item" href="analisis-estructurado.html#declaracion">Declaración de Propósitos</a></li>
+                            <li><a class="dropdown-item" href="analisis-estructurado.html#diagrama">Diagrama de Contexto</a></li>
+                            <li><a class="dropdown-item" href="analisis-estructurado.html#eventos">Lista de Eventos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="orientado-objetos.html">Orientado A Objetos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="videos.html">Videos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactos.html">Contactos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" style="background: linear-gradient(135deg, #1f3a93 0%, #2d5aa3 100%);">
+        <div class="container text-white py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold mb-4">Sistema de Gestión de Almacenes</h1>
+                    <p class="lead mb-4">Optimiza el control de inventarios para la Constructora Ríos Herrera</p>
+                    <a href="#blog" class="btn btn-warning btn-lg">Más Información</a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://via.placeholder.com/400x300/ff8c00/ffffff?text=Sistema+Almacenes" alt="Sistema" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG SECTION -->
+    <section id="blog" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Nuestro Blog</h2>
+            
+            <div class="row g-4">
+                <!-- Artículo 1 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="https://via.placeholder.com/300x200/1f3a93/ffffff?text=Modelo+Ambiental" class="card-img-top" alt="Modelo Ambiental">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">Modelo Ambiental</h5>
+                            <p class="card-text">Un modelo ambiental simula procesos naturales y humanos, permitiendo analizar impactos, predecir escenarios y optimizar la gestión de recursos.</p>
+                            <a href="marco-teorico.html#introduccion" class="btn btn-sm btn-outline-primary">LEER MÁS</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artículo 2 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="https://via.placeholder.com/300x200/ff8c00/ffffff?text=Modelo+Comportamiento" class="card-img-top" alt="Modelo Comportamiento">
+                        <div class="card-body">
+                            <h5 class="card-title text-warning">Modelo de Comportamiento</h5>
+                            <p class="card-text">Un modelo de comportamiento describe cómo los sistemas a individuos responden a estímulos, prediciendo acciones y reacciones en diferentes situaciones.</p>
+                            <a href="analisis-estructurado.html#diagrama" class="btn btn-sm btn-outline-warning">LEER MÁS</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artículo 3 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <img src="https://via.placeholder.com/300x200/6c757d/ffffff?text=Orientado+Objetos" class="card-img-top" alt="Orientado Objetos">
+                        <div class="card-body">
+                            <h5 class="card-title text-secondary">Orientado A Objetos</h5>
+                            <p class="card-text">Un modelo orientado a objetos representa entidades como objetos, con atributos y métodos, facilitando la estructura y reutilización del software.</p>
+                            <a href="orientado-objetos.html#definicion" class="btn btn-sm btn-outline-secondary">LEER MÁS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-3">Navegación</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
+                        <li><a href="marco-teorico.html" class="text-white text-decoration-none">Marco Teórico</a></li>
+                        <li><a href="analisis-estructurado.html" class="text-white text-decoration-none">Análisis</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-3">Información</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="orientado-objetos.html" class="text-white text-decoration-none">OOP</a></li>
+                        <li><a href="videos.html" class="text-white text-decoration-none">Videos</a></li>
+                        <li><a href="contactos.html" class="text-white text-decoration-none">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-3">Recursos</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Documentos</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Descargas</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-3">Empresa</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Sobre Nosotros</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Privacidad</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Términos</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="bg-secondary">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 Constructora Ríos Herrera. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
