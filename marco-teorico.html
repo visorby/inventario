@@ -29,11 +29,13 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="marcoDropdown">
                             <li><a class="dropdown-item" href="#introduccion">Introducción</a></li>
-                            <li><a class="dropdown-item" href="#antecedentes">Antecedentes</a></li>
+                            <li><a class="dropdown-item" href="#problema">Problema</a></li>
+                            <li><a class="dropdown-item" href="#antecedentes">Antecedentes del Problema</a></li>
                             <li><a class="dropdown-item" href="#planteamiento">Planteamiento del Problema</a></li>
-                            <li><a class="dropdown-item" href="#arbol">Árbol de Problema</a></li>
                             <li><a class="dropdown-item" href="#formulacion">Formulación del Problema</a></li>
-                            <li><a class="dropdown-item" href="#proposito">Propósito del Estudio</a></li>
+                            <li><a class="dropdown-item" href="#objetivos">Objetivos</a></li>
+                            <li><a class="dropdown-item" href="#hipotesis">Hipótesis</a></li>
+                            <li><a class="dropdown-item" href="#justificaciones">Justificaciones</a></li>
                             <li><a class="dropdown-item" href="#metodologia">Metodología</a></li>
                         </ul>
                     </li>
@@ -96,12 +98,14 @@
                         <h6 class="card-title fw-bold text-primary mb-3">ÍNDICE</h6>
                         <ul class="list-unstyled">
                             <li class="mb-2"><a href="#introduccion" class="text-decoration-none text-dark small">1. Introducción</a></li>
-                            <li class="mb-2"><a href="#antecedentes" class="text-decoration-none text-dark small">2. Antecedentes</a></li>
-                            <li class="mb-2"><a href="#planteamiento" class="text-decoration-none text-dark small">3. Planteamiento del Problema</a></li>
-                            <li class="mb-2"><a href="#arbol" class="text-decoration-none text-dark small">4. Árbol de Problema</a></li>
-                            <li class="mb-2"><a href="#formulacion" class="text-decoration-none text-dark small">5. Formulación del Problema</a></li>
-                            <li class="mb-2"><a href="#proposito" class="text-decoration-none text-dark small">6. Propósito del Estudio</a></li>
-                            <li class="mb-2"><a href="#metodologia" class="text-decoration-none text-dark small">7. Metodología</a></li>
+                            <li class="mb-2"><a href="#problema" class="text-decoration-none text-dark small">2. Problema</a></li>
+                            <li class="mb-2"><a href="#antecedentes" class="text-decoration-none text-dark small">3. Antecedentes</a></li>
+                            <li class="mb-2"><a href="#planteamiento" class="text-decoration-none text-dark small">4. Planteamiento</a></li>
+                            <li class="mb-2"><a href="#formulacion" class="text-decoration-none text-dark small">5. Formulación</a></li>
+                            <li class="mb-2"><a href="#objetivos" class="text-decoration-none text-dark small">6. Objetivos</a></li>
+                            <li class="mb-2"><a href="#hipotesis" class="text-decoration-none text-dark small">7. Hipótesis</a></li>
+                            <li class="mb-2"><a href="#justificaciones" class="text-decoration-none text-dark small">8. Justificaciones</a></li>
+                            <li class="mb-2"><a href="#metodologia" class="text-decoration-none text-dark small">9. Metodología</a></li>
                         </ul>
                     </div>
                 </div>
@@ -111,66 +115,214 @@
             <div class="col-lg-9">
                 <!-- Introducción -->
                 <section id="introduccion" class="mb-5 scroll-margin">
-                    <h2 class="fw-bold text-primary mb-3">Introducción</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <h2 class="fw-bold text-primary mb-3">1. Introducción</h2>
+                    <p>Hoy en día, para el sector de la construcción, modernizarse digitalmente ya no es un lujo, sino una necesidad para sobrevivir. Para empresas con operaciones en distintas ciudades, como la "Constructora Ríos Herrera", que trabaja simultáneamente en las ciudades de Sucre y El Alto, administrar correctamente los materiales es la clave para que el negocio sea rentable. Sin embargo, el uso de métodos manuales como: cuadernos físicos, hojas de Excel sueltas y mensajes por WhatsApp; provoca que la información se pierda o se desordene entre la oficina y la obra.</p>
+                    
+                    <p>Este desorden en el trabajo diario genera problemas graves: no se sabe con exactitud dónde están los materiales, existen diferencias entre lo que se ve en el control manual y lo que realmente hay en el almacén, y ocurren las pérdidas, es decir, material que desaparece sin registro. Además, al no tener una visión clara de lo que queda en almacenes, se terminan haciendo compras de emergencia más caras o, peor aún, se detiene la construcción porque falta algún material básico.</p>
+                    
+                    <p>Para solucionar esto, este proyecto propone crear un <strong>"Sistema de Gestión de Almacén y Control de Inventarios"</strong>, diseñado para centralizar toda la información y automatizar las reglas de control de almacenes e inventarios de la empresa. Para asegurar que el software realmente funcione en la operación diaria de la obra, utilizaremos la metodología de trabajo SCRUM. Esta forma de trabajo permite construir el sistema por partes, probando y corrigiendo cada avance rápidamente.</p>
+
+                    <div class="alert alert-info border-left border-4 border-primary" role="alert">
+                        <strong>Modelos Técnicos Utilizados:</strong>
+                        <ul class="mb-0 mt-2">
+                            <li><strong>MCUN:</strong> Modelado de Casos de Uso de Negocio para organizar procesos generales</li>
+                            <li><strong>CUS:</strong> Diagramas de Casos de Uso de Sistema mostrando funciones del programa</li>
+                            <li><strong>Casos Expandidos:</strong> Guías detalladas con la conversación usuario-programa</li>
+                            <li><strong>UML:</strong> Diagrama de Clases representando la arquitectura lógica del software</li>
+                            <li><strong>MER:</strong> Modelo Entidad-Relación para la base de datos de inventarios</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Problema -->
+                <section id="problema" class="mb-5 scroll-margin">
+                    <h2 class="fw-bold text-primary mb-3">2. Problema</h2>
+                    <p>La Constructora Ríos Herrera actualmente presenta diversas dificultades en la gestión de almacén y el control de inventarios, debido a que gran parte de sus procesos administrativos y operativos se realizan de forma manual mediante planillas físicas, hojas de cálculo en Excel y comunicaciones informales a través de WhatsApp. La ausencia de un sistema centralizado y automatizado provoca desorganización en el registro, control y seguimiento de los materiales utilizados en las distintas obras de construcción.</p>
+                    
+                    <p>El manejo manual de la información genera frecuentes errores en el registro de entradas y salidas de materiales, ocasionando inconsistencias entre el inventario físico existente y el inventario registrado. Asimismo, la información puede duplicarse, extraviarse o actualizarse de manera tardía, dificultando la obtención de datos confiables y en tiempo real para la toma de decisiones.</p>
+
+                    <p>Otro problema importante es la <strong>falta de trazabilidad</strong> de los materiales y herramientas, ya que no existe un control adecuado que permita identificar con precisión qué recursos fueron asignados a cada proyecto. Esto ocasiona pérdidas de materiales, uso ineficiente de recursos y dificultades para detectar responsabilidades en caso de faltantes o errores.</p>
+
+                    <p>Además, la empresa enfrenta retrasos en la ejecución de obras debido a la falta de control sobre el stock disponible, lo que provoca compras de emergencia con incremento de costos operativos, así como excesos de inventario por compras innecesarias.</p>
+
+                    <p>La falta de reportes automatizados y consolidados limita el análisis y seguimiento de la información relacionada con inventarios, movimientos de almacén y consumo de materiales por proyecto, dificultando la planificación de compras y el control financiero.</p>
                 </section>
 
                 <!-- Antecedentes -->
                 <section id="antecedentes" class="mb-5 scroll-margin">
-                    <h2 class="fw-bold text-primary mb-3">Antecedentes</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <h2 class="fw-bold text-primary mb-3">2.1 Antecedentes del Problema</h2>
+                    <p>Actualmente, muchas empresas constructoras requieren sistemas informáticos que permitan administrar de manera eficiente sus recursos materiales, humanos y financieros, debido a que la transformación digital se ha convertido en un factor clave para mejorar la productividad y competitividad empresarial.</p>
+                    
+                    <p>De acuerdo con la encuesta realizada a la <strong>Constructora Ríos Herrera</strong>, la empresa cuenta con:</p>
                     <ul>
-                        <li>Primer antecedente importante</li>
-                        <li>Segundo antecedente relevante</li>
-                        <li>Tercer antecedente significativo</li>
+                        <li>Dos sucursales ubicadas en Sucre y El Alto</li>
+                        <li>Aproximadamente 34 empleados distribuidos en distintas áreas operativas y administrativas</li>
+                        <li>Control de asistencia, solicitudes de materiales y registros de inventario mediante planillas físicas y mensajes de WhatsApp</li>
                     </ul>
+
+                    <p>Estos métodos provoca dificultades en la actualización de datos, pérdida de tiempo y errores en la información registrada. Existen problemas relacionados con la trazabilidad de materiales, diferencias entre el inventario real y el registrado, desperdicio de insumos y retrasos ocasionados por la falta de materiales en obra.</p>
+
+                    <p>Ante esta situación, surge la necesidad de desarrollar un <strong>Sistema de Gestión de Almacén y Control de Inventarios</strong> que permita integrar la información, automatizar procesos y mejorar el control de materiales.</p>
                 </section>
 
                 <!-- Planteamiento del Problema -->
                 <section id="planteamiento" class="mb-5 scroll-margin">
-                    <h2 class="fw-bold text-primary mb-3">Planteamiento del Problema</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <div class="alert alert-info" role="alert">
-                        <strong>Nota:</strong> El problema principal radica en la necesidad de optimizar procesos de gestión.
+                    <h2 class="fw-bold text-primary mb-3">2.2 Planteamiento del Problema</h2>
+                    <p>En la actualidad, la Constructora Ríos Herrera presenta dificultades en la administración y control de inventarios debido a que gran parte de sus procesos se realizan manualmente. El registro de materiales, solicitudes desde obra, control de asistencia y seguimiento de recursos se efectúan mediante hojas de cálculo, documentos físicos y aplicaciones de mensajería, lo que limita la disponibilidad de información en tiempo real.</p>
+                    
+                    <p>La ausencia de un sistema centralizado ocasiona problemas como:</p>
+                    <div class="row mt-3">
+                        <div class="col-md-6 mb-3">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h6 class="text-warning fw-bold">Problemas Operativos</h6>
+                                    <ul class="small mb-0">
+                                        <li>Diferencias entre inventario físico y digital</li>
+                                        <li>Demoras en control de materiales</li>
+                                        <li>Pérdidas de insumos pequeños</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h6 class="text-warning fw-bold">Problemas de Seguimiento</h6>
+                                    <ul class="small mb-0">
+                                        <li>Retrasos en algunas obras</li>
+                                        <li>Dificultades supervisar recursos</li>
+                                        <li>Falta de integración almacén-obra</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </section>
 
-                <!-- Árbol de Problema -->
-                <section id="arbol" class="mb-5 scroll-margin">
-                    <h2 class="fw-bold text-primary mb-3">Árbol de Problema</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <img src="https://via.placeholder.com/600x400/1f3a93/ffffff?text=Árbol+de+Problema" alt="Árbol de Problema" class="img-fluid rounded shadow-sm">
+                    <p class="mt-3">Por ello, se plantea el desarrollo de un Sistema de Gestión de Almacén y Control de Inventarios que permita optimizar los procesos administrativos y operativos, mejorar la trazabilidad de materiales, automatizar registros y proporcionar información confiable para la gestión eficiente de las obras.</p>
                 </section>
 
                 <!-- Formulación del Problema -->
                 <section id="formulacion" class="mb-5 scroll-margin">
-                    <h2 class="fw-bold text-primary mb-3">Formulación del Problema</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-                    <p>La pregunta principal que guía este estudio es: ¿Cómo optimizar el sistema de gestión de almacenes para mejorar el control de inventarios?</p>
+                    <h2 class="fw-bold text-primary mb-3">2.3 Formulación del Problema</h2>
+                    
+                    <div class="card border-left border-4 border-primary mb-4">
+                        <div class="card-body">
+                            <h6 class="fw-bold text-primary mb-2">Problema Central</h6>
+                            <p class="mb-0"><strong>¿De qué manera mejorará la gestión de almacén y el control de inventarios en la Constructora Ríos Herrera mediante el desarrollo de un sistema informático?</strong></p>
+                        </div>
+                    </div>
+
+                    <h6 class="fw-bold mb-3">Problemas Secundarios</h6>
+                    <ul>
+                        <li>Controlar de manera eficiente el ingreso y salida de materiales del almacén.</li>
+                        <li>Reducir las diferencias existentes entre el inventario físico y el inventario registrado en el sistema.</li>
+                        <li>Mejorar la trazabilidad de materiales desde el almacén hasta las diferentes obras de construcción.</li>
+                        <li>Optimizar el seguimiento y control de recursos y materiales en las distintas sucursales de la empresa.</li>
+                        <li>Automatizar el registro, actualización y consulta de información en tiempo real.</li>
+                    </ul>
                 </section>
 
-                <!-- Propósito del Estudio -->
-                <section id="proposito" class="mb-5 scroll-margin">
-                    <h2 class="fw-bold text-primary mb-3">Propósito del Estudio</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <div class="card border-left border-warning border-4">
-                        <div class="card-body">
-                            <p class="mb-0"><strong>Objetivo General:</strong> Desarrollar un sistema de gestión de almacenes eficiente para la Constructora Ríos Herrera.</p>
+                <!-- Objetivos -->
+                <section id="objetivos" class="mb-5 scroll-margin">
+                    <h2 class="fw-bold text-primary mb-3">3. Objetivos</h2>
+                    
+                    <h6 class="fw-bold mb-3">3.1 Objetivo General</h6>
+                    <div class="alert alert-warning border-left border-4" role="alert">
+                        Desarrollar un <strong>sistema de gestión de almacén y control de inventarios</strong> para la Constructora Ríos Herrera, mediante el análisis de necesidades, el diseño estructurado del sistema, la elaboración de diagramas y la creación de un blog informativo, con el fin de optimizar la organización, el control y el seguimiento de materiales utilizados en las obras.
+                    </div>
+
+                    <h6 class="fw-bold mb-3">3.2 Objetivos Específicos</h6>
+                    <ol>
+                        <li>Listar materiales, obras, personal y proveedores para organizar la información base del sistema.</li>
+                        <li>Crear el diagrama de clases para definir la lógica, jerarquías de usuarios y relaciones de inventario.</li>
+                        <li>Elaborar modelos ambientales y de comportamiento que permitan representar el entorno, los procesos y la interacción de los usuarios con el sistema.</li>
+                        <li>Registrar entradas y salidas digitales para controlar el stock y asignar insumos a obras en tiempo real.</li>
+                        <li>Desarrollar informes de costos gerenciales basados en el modelo de datos diseñado.</li>
+                    </ol>
+                </section>
+
+                <!-- Hipótesis -->
+                <section id="hipotesis" class="mb-5 scroll-margin">
+                    <h2 class="fw-bold text-primary mb-3">4. Hipótesis</h2>
+                    <p>La implementación de un sistema de gestión de almacén y control de inventarios, fundamentado en un modelado de arquitectura interna (clases, procesos y comportamiento), permitirá la transición de un entorno de gestión manual basado en registros físicos y mensajería instantánea hacia un <strong>ecosistema digital centralizado y auditable</strong>.</p>
+
+                    <p>Se postula que la integración de una estructura estática de datos y un modelo dinámico de procesos mitigará la pérdida de materiales por falta de trazabilidad conocida como <strong>"hormigueo"</strong> y reducirá las discrepancias entre el inventario físico y el digital en las sucursales de Sucre y El Alto.</p>
+
+                    <p>Asimismo, la sistematización de la lógica de persistencia y la sincronización en tiempo real facultará a la Constructora Ríos Herrera para gestionar con precisión la volatilidad de los costos de los materiales de construcción, optimizando la toma de decisiones presupuestarias y eliminando los tiempos muertos derivados del desabastecimiento en obra.</p>
+                </section>
+
+                <!-- Justificaciones -->
+                <section id="justificaciones" class="mb-5 scroll-margin">
+                    <h2 class="fw-bold text-primary mb-3">5. Justificaciones</h2>
+                    
+                    <p>La empresa Ríos Herrera maneja una gran cantidad de materiales que se trasladan o usan, además de trabajadores que manipulan estos materiales, con un registro mediante hojas de cálculo, por lo cual presenta variaciones y limitaciones.</p>
+
+                    <div class="row mt-4">
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h6 class="card-title fw-bold text-primary mb-3">Justificación Social</h6>
+                                    <p class="small">El desarrollo del sistema responde a la necesidad de mejorar la organización y coordinación del personal. Permitirá optimizar la interacción entre administradores, ingenieros, almaceneros y técnicos, facilitando el acceso a información en tiempo real y reduciendo errores humanos.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h6 class="card-title fw-bold text-warning mb-3">Justificación Económica</h6>
+                                    <p class="small">La empresa ha presentado pérdidas económicas. El sistema permitirá llevar mejor control de materiales, evitar pérdidas y desperdicios, facilitando el seguimiento de costos y comparación con presupuestos.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h6 class="card-title fw-bold text-danger mb-3">Justificación Tecnológica</h6>
+                                    <p class="small">El desarrollo de un sistema digital permitirá centralizar toda la información, implementar reportes automáticos, modernizando la gestión y haciendo los procesos más rápidos, seguros y eficientes.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
 
                 <!-- Metodología -->
                 <section id="metodologia" class="mb-5 scroll-margin">
-                    <h2 class="fw-bold text-primary mb-3">Metodología</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <ol>
-                        <li>Fase 1: Análisis y recopilación de datos</li>
-                        <li>Fase 2: Diseño de soluciones</li>
-                        <li>Fase 3: Implementación y pruebas</li>
-                        <li>Fase 4: Evaluación y mejoras</li>
-                    </ol>
+                    <h2 class="fw-bold text-primary mb-3">6. Metodología</h2>
+                    
+                    <h6 class="fw-bold mb-3">6.1 Método de Investigación</h6>
+                    <p>Se empleará un método <strong>analítico-sintético</strong> y de carácter descriptivo:</p>
+                    <ul>
+                        <li><strong>Analítico:</strong> Se desglosarán los flujos actuales de información desde el requerimiento de material en obra hasta su validación en gerencia, identificando cuellos de botella en la operativa manual.</li>
+                        <li><strong>Sintético:</strong> Se reconstruirá el proceso operativo mediante el diseño de diagramas de procesos y modelos ambientales que unifiquen la gestión de las sucursales.</li>
+                        <li><strong>Enfoque:</strong> La investigación es aplicada, orientada a resolver la ineficiencia en la conciliación de inventarios.</li>
+                    </ul>
+
+                    <h6 class="fw-bold mt-4 mb-3">6.2 Medios e Instrumentos de Investigación</h6>
+                    <p>Para la recolección de requerimientos y datos técnicos se utilizarán los siguientes instrumentos:</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm mb-3">
+                                <div class="card-body">
+                                    <h6 class="text-primary fw-bold">Encuesta Estructurada</h6>
+                                    <p class="small mb-0">Aplicada a la Gerencia General para determinar jerarquía funcional, roles de usuario y puntos críticos de pérdida de recursos.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm mb-3">
+                                <div class="card-body">
+                                    <h6 class="text-primary fw-bold">Análisis Documental</h6>
+                                    <p class="small mb-0">Revisión exhaustiva de planillas, órdenes de compra y reportes de avance para definición de atributos en el Diagrama de Clases.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <h6 class="text-primary fw-bold">Observación Indirecta</h6>
+                            <p class="small mb-0">Evaluación de la comunicación interna vía WhatsApp y llamadas para el diseño de un módulo de requerimientos digitales que reemplace los canales informales.</p>
+                        </div>
+                    </div>
                 </section>
             </div>
         </div>
