@@ -186,53 +186,553 @@
 
                 <!-- Caso de Uso Expandido -->
                 <section id="caso-expandido" class="mb-5 scroll-margin">
-                    <h2 class="fw-bold text-primary mb-3">Caso de Uso Expandido</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Los casos de uso expandidos proporcionan un nivel de detalle completo del flujo de acciones.</p>
-                    <div class="card border-left border-success border-4">
+                    <h2 class="fw-bold text-primary mb-3">Casos de Uso Expandido</h2>
+                    <p>Es un documento narrativo que describe la secuencia de eventos de un actor que utiliza un sistema para completar un proceso. Son historias o casos de utilización de un sistema; no son exactamente los requerimientos ni las especificaciones funcionales, sino que ejemplifican e incluyen los requerimientos.</p>
+                    <div class="card border-left border-primary border-4">
                         <div class="card-body">
                             <h6 class="fw-bold">Definición</h6>
-                            <p class="mb-0">Un Caso de Uso Expandido describe en detalle cada paso de una interacción, incluyendo el flujo principal, flujos alternativos, condiciones previas y postcondiciones.</p>
+                            <p class="mb-0">Muestra más detalles que uno de alto nivel; suelen ser útiles para alcanzar un conocimiento más profundo de los procesos y de los requerimientos..</p>
                         </div>
                     </div>
-                    <h6 class="fw-bold mt-4 text-warning">Ejemplo: UC001 - Registrar Entrada de Producto</h6>
-                    <div class="table-responsive mt-3">
-                        <table class="table table-bordered">
-                            <tbody>
-                                <tr>
-                                    <td class="fw-bold bg-light">Nombre</td>
-                                    <td>Registrar Entrada de Producto</td>
-                                </tr>
-                                <tr>
-                                    <td class="fw-bold bg-light">Actor Primario</td>
-                                    <td>Encargado de Almacén</td>
-                                </tr>
-                                <tr>
-                                    <td class="fw-bold bg-light">Precondición</td>
-                                    <td>El encargado ha autenticado en el sistema</td>
-                                </tr>
-                                <tr>
-                                    <td class="fw-bold bg-light">Flujo Principal</td>
-                                    <td>
-                                        1. El encargado accede al módulo de entrada<br>
-                                        2. Ingresa los datos del producto<br>
-                                        3. Sistema valida la información<br>
-                                        4. Se registra la entrada en la base de datos<br>
-                                        5. Sistema genera comprobante
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="fw-bold bg-light">Flujos Alternativos</td>
-                                    <td>
-                                        • Datos inválidos: Sistema muestra error y solicita corrección<br>
-                                        • Producto duplicado: Sistema advierte sobre existencia previa
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="fw-bold bg-light">Postcondición</td>
-                                    <td>El producto está registrado y disponible en el inventario</td>
-                                </tr>
-                            </tbody>
-                        </table>
+
+                    <p class="lead">Versión 1.1 | Sistema de Gestión de Almacenes y Control de Inventarios | Constructora Ríos Herrera | Fecha: 08/06/2026</p>
+
+                    <!-- CU-01: GESTIÓN DE ABASTECIMIENTO Y COMPRAS -->
+                    <div class="card border-0 shadow-sm mb-4 mt-4">
+                        <div class="card-header bg-primary text-white py-3">
+                            <h5 class="mb-0">CU-01 — MÓDULO 1: GESTIÓN DE ABASTECIMIENTO Y COMPRAS</h5>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="fw-bold text-primary mb-3">Caso de Uso: Generar orden de compra</h6>
+                            <div class="table-responsive">
+                                <table class="table table-sm">
+                                    <tbody>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Código</td>
+                                            <td>CU-01</td>
+                                            <td class="fw-bold bg-light">Tipo</td>
+                                            <td>Primario</td>
+                                            <td class="fw-bold bg-light">Versión</td>
+                                            <td>1.1</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Actores</td>
+                                            <td colspan="5">Gerente (iniciador), Encargado almacén (responsable), Proveedor</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Propósito</td>
+                                            <td colspan="5">Permitir al Gerente generar una orden de compra formal cuando se detecta la necesidad de adquirir materiales, garantizando la trazabilidad del proceso de abastecimiento.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Resumen</td>
+                                            <td colspan="5">El Gerente detecta la necesidad de compra, selecciona los materiales y al proveedor validado, y genera la orden de compra. El sistema incluye la verificación de stock mínimo y la autorización de la orden.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Precondiciones</td>
+                                            <td colspan="5">El Gerente debe estar autenticado en el sistema. Los materiales deben estar registrados con stock mínimo definido.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Postcondiciones</td>
+                                            <td colspan="5">La orden de compra queda registrada en el sistema con estado 'enviada'. El proveedor queda vinculado a la orden. El stock mínimo queda verificado.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Referencias Cruzadas</td>
+                                            <td colspan="5">CU-02 (Solicitar material desde obra), CU-03 (Control de inventario)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <h6 class="fw-bold mt-3 text-warning">Secuencia Normal de Eventos</h6>
+                            <div class="table-responsive mt-2">
+                                <table class="table table-bordered">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Acciones del Actor</th>
+                                            <th>Respuesta del Sistema</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>El Gerente accede al módulo de abastecimiento y selecciona 'Generar orden de compra'.</td>
+                                            <td>El sistema muestra el formulario de nueva orden de compra con los materiales disponibles.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>El Gerente selecciona los materiales requeridos e ingresa las cantidades necesarias.</td>
+                                            <td>El sistema ejecuta &lt;&lt;include&gt;&gt; Detectar necesidad de compra: verifica automáticamente qué materiales están bajo el stock mínimo y los resalta.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>El sistema verifica el stock de cada material seleccionado.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>El sistema ejecuta &lt;&lt;include&gt;&gt; Verificar stock mínimo: compara las existencias actuales contra los mínimos configurados y confirma la necesidad de compra.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>El Gerente selecciona al proveedor de la lista de proveedores registrados.</td>
+                                            <td>El sistema ejecuta &lt;&lt;include&gt;&gt; Validar proveedor y llama a &lt;&lt;include&gt;&gt; Registrar datos proveedor, mostrando nombre, NIT, contacto y rubro del proveedor seleccionado.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>El Gerente revisa los datos de la orden y confirma la generación.</td>
+                                            <td>El sistema ejecuta &lt;&lt;include&gt;&gt; Autorizar orden: registra número de orden, fecha, monto estimado, materiales y proveedor, y cambia el estado a 'autorizada'.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>El Encargado de almacén recibe y registra físicamente los materiales al llegar.</td>
+                                            <td>El sistema ejecuta &lt;&lt;include&gt;&gt; Recepcionar materiales y llama a &lt;&lt;include&gt;&gt; Actualizar Kardex: registra la entrada con fecha, cantidad, proveedor y número de factura.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>El Encargado confirma la recepción completa en el sistema.</td>
+                                            <td>El sistema registra la entrada al almacén. Si algún material sigue bajo el mínimo, ejecuta &lt;&lt;extend&gt;&gt; Alerta material crítico notificando al Gerente.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h6 class="fw-bold mt-3 text-danger">Cursos Alternos</h6>
+                            <ul class="small">
+                                <li><strong>Línea 4:</strong> Si el proveedor no está registrado, el sistema habilita el formulario de registro de nuevo proveedor antes de continuar con la orden.</li>
+                                <li><strong>Línea 5:</strong> Si el Gerente no tiene permisos de autorización, el sistema bloquea la operación y muestra el mensaje: 'Rol insuficiente para autorizar órdenes de compra'.</li>
+                                <li><strong>Línea 6:</strong> Si la cantidad recibida no coincide con la orden, el sistema registra discrepancia y genera alerta de revisión. La orden queda en estado 'recibida parcial'.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- CU-02: SOLICITUD DE MATERIALES Y DESPACHO A OBRA -->
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header bg-success text-white py-3">
+                            <h5 class="mb-0">CU-02 — MÓDULO 2: SOLICITUD DE MATERIALES Y DESPACHO A OBRA</h5>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="fw-bold text-success mb-3">Caso de Uso: Solicitar material desde obra</h6>
+                            <div class="table-responsive">
+                                <table class="table table-sm">
+                                    <tbody>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Código</td>
+                                            <td>CU-02</td>
+                                            <td class="fw-bold bg-light">Tipo</td>
+                                            <td>Primario</td>
+                                            <td class="fw-bold bg-light">Versión</td>
+                                            <td>1.1</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Actores</td>
+                                            <td colspan="5">Ingeniero (iniciador), Administrador de obra, Encargado almacén (responsable)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Propósito</td>
+                                            <td colspan="5">Permitir al Ingeniero residente solicitar materiales desde la obra de forma digital, garantizando la autorización del despacho y la trazabilidad de la salida vinculada a una obra específica.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Resumen</td>
+                                            <td colspan="5">El Ingeniero solicita materiales desde la obra. El sistema verifica disponibilidad en stock. El Administrador autoriza el despacho. El Encargado de almacén registra la salida y la vincula a la obra correspondiente.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Precondiciones</td>
+                                            <td colspan="5">El Ingeniero debe estar autenticado y asignado a una obra activa. Los materiales deben estar registrados con stock disponible en el sistema.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Postcondiciones</td>
+                                            <td colspan="5">La solicitud queda registrada con detalle completo. La salida queda vinculada a la obra específica en el kardex. El stock se descuenta del almacén. El responsable del retiro queda registrado.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Referencias Cruzadas</td>
+                                            <td colspan="5">CU-01 (Generar orden de compra), CU-03 (Control de inventario)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h6 class="fw-bold mt-3 text-warning">Secuencia Normal de Eventos</h6>
+                            <div class="table-responsive mt-2">
+                                <table class="table table-bordered">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Acciones del Actor</th>
+                                            <th>Respuesta del Sistema</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>El Ingeniero accede al módulo de solicitudes y crea una nueva solicitud de material.</td>
+                                            <td>El sistema muestra el formulario con las obras activas asignadas al Ingeniero y el catálogo de materiales disponibles.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>El Ingeniero selecciona la obra destino, el material y la cantidad requerida.</td>
+                                            <td>El sistema ejecuta &lt;&lt;include&gt;&gt; Registrar detalle solicitud: guarda código de material, cantidad, unidad de medida, obra y fecha de solicitud.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>El Ingeniero envía la solicitud para revisión.</td>
+                                            <td>El sistema ejecuta &lt;&lt;include&gt;&gt; Verificar disponibilidad de stock y llama a &lt;&lt;include&gt;&gt; Consultar kardex material: compara la cantidad solicitada con las existencias actuales.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>El Administrador de obra recibe la notificación y revisa la solicitud.</td>
+                                            <td>El sistema muestra el detalle de la solicitud con confirmación de disponibilidad y datos del material requerido.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>El Administrador autoriza el despacho y designa al responsable del retiro.</td>
+                                            <td>El sistema ejecuta &lt;&lt;include&gt;&gt; Autorizar despacho y llama a &lt;&lt;include&gt;&gt; Registrar responsable retiro: guarda el nombre del trabajador que retirará el material.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>El Encargado de almacén entrega el material y confirma la salida en el sistema.</td>
+                                            <td>El sistema ejecuta &lt;&lt;include&gt;&gt; Registrar salida de almacén y llama a &lt;&lt;include&gt;&gt; Vincular obra específica: asocia el movimiento a la obra y actualiza el kardex en tiempo real.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>El Administrador confirma la asignación del material a la obra.</td>
+                                            <td>El sistema ejecuta &lt;&lt;include&gt;&gt; Asignar material de obra: registra el material como asignado a la obra. Si hay excedente en otra obra, sugiere &lt;&lt;extend&gt;&gt; Traspaso entre obras.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h6 class="fw-bold mt-3 text-danger">Cursos Alternos</h6>
+                            <ul class="small">
+                                <li><strong>Línea 3:</strong> Si el stock es insuficiente, el sistema bloquea el despacho y ejecuta &lt;&lt;extend&gt;&gt; Registrar compra emergencia, notificando automáticamente al Gerente.</li>
+                                <li><strong>Línea 4:</strong> Si el Administrador rechaza la solicitud, el sistema cambia el estado a 'rechazada', notifica al Ingeniero con el motivo y cierra el flujo.</li>
+                                <li><strong>Línea 6:</strong> Si la cantidad despachada difiere de la solicitada, el sistema registra la diferencia como discrepancia en el módulo de inventario.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- CU-03: CONTROL DE INVENTARIO Y MOVIMIENTOS DE ALMACÉN -->
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header bg-info text-white py-3">
+                            <h5 class="mb-0">CU-03 — MÓDULO 3: CONTROL DE INVENTARIO Y MOVIMIENTOS DE ALMACÉN</h5>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="fw-bold text-info mb-3">Caso de Uso: Realizar conteos y control de inventario</h6>
+                            <div class="table-responsive">
+                                <table class="table table-sm">
+                                    <tbody>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Código</td>
+                                            <td>CU-03</td>
+                                            <td class="fw-bold bg-light">Tipo</td>
+                                            <td>Primario</td>
+                                            <td class="fw-bold bg-light">Versión</td>
+                                            <td>1.1</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Actores</td>
+                                            <td colspan="5">Encargado almacén (iniciador), Ingeniero, Administrador (responsable)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Propósito</td>
+                                            <td colspan="5">Permitir al Encargado de almacén realizar el conteo físico de materiales, conciliar diferencias con el sistema, actualizar el stock y generar reportes de inventario para garantizar la exactitud de las existencias.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Resumen</td>
+                                            <td colspan="5">El Encargado realiza el conteo físico mensual, ingresa las cantidades al sistema y este concilia diferencias. Se actualiza el kardex, se gestiona el stock mínimo y se generan reportes.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Precondiciones</td>
+                                            <td colspan="5">El Encargado debe estar autenticado. Deben existir materiales registrados en el sistema. El período de conteo debe estar habilitado por el Administrador.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Postcondiciones</td>
+                                            <td colspan="5">El inventario físico queda conciliado con el sistema. Las diferencias quedan registradas con fecha y responsable. El kardex se actualiza. Las alertas de stock bajo quedan generadas para materiales críticos.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Referencias Cruzadas</td>
+                                            <td colspan="5">CU-01 (Generar orden de compra), CU-02 (Solicitar material desde obra)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h6 class="fw-bold mt-3 text-warning">Secuencia Normal de Eventos</h6>
+                            <div class="table-responsive mt-2">
+                                <table class="table table-bordered">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Acciones del Actor</th>
+                                            <th>Respuesta del Sistema</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>El Ingeniero consulta la disponibilidad de materiales para planificación.</td>
+                                            <td>El sistema muestra el stock disponible por material. Si se requiere historial detallado, ejecuta &lt;&lt;extend&gt;&gt; Revisar historial movimientos.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>El Encargado de almacén inicia el proceso de conteo físico mensual.</td>
+                                            <td>El sistema genera la lista de todos los materiales registrados con sus cantidades actuales según el kardex.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>El Encargado ingresa las cantidades físicas contadas material por material.</td>
+                                            <td>El sistema ejecuta &lt;&lt;include&gt;&gt; Realizar conteos y llama a &lt;&lt;include&gt;&gt; Registrar movimientos kardex: guarda la cantidad física, fecha y responsable del conteo.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>El Encargado finaliza el ingreso y solicita la conciliación.</td>
+                                            <td>El sistema ejecuta &lt;&lt;include&gt;&gt; Actualizar stock en sistema: compara cantidades físicas con el registro digital y calcula las diferencias.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>El Encargado revisa las diferencias y confirma o justifica cada una.</td>
+                                            <td>El sistema ejecuta &lt;&lt;include&gt;&gt; Conciliar con sistema y llama a &lt;&lt;include&gt;&gt; Registrar diferencias: guarda la variación con motivo y responsable.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>El Encargado confirma la conciliación y solicita actualización de precios.</td>
+                                            <td>El sistema ejecuta &lt;&lt;include&gt;&gt; Actualizar precio unitario con los últimos precios de compra registrados en el kardex.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>El Administrador revisa los niveles y ajusta los mínimos si es necesario.</td>
+                                            <td>El sistema ejecuta &lt;&lt;include&gt;&gt; Gestionar stock mínimo. Si algún material está bajo el umbral definido, ejecuta &lt;&lt;extend&gt;&gt; Generar alerta stock mínimo notificando al Gerente.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>El Ingeniero o Administrador solicita el reporte de inventario.</td>
+                                            <td>El sistema ejecuta &lt;&lt;include&gt;&gt; Generar reporte inventario y llama a &lt;&lt;include&gt;&gt; Consultar historial movimientos: genera reporte con materiales más usados, agotados y valorización total.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h6 class="fw-bold mt-3 text-danger">Cursos Alternos</h6>
+                            <ul class="small">
+                                <li><strong>Línea 3:</strong> Si el Encargado ingresa una cantidad negativa o cero, el sistema rechaza el valor y solicita reingreso con el mensaje: 'La cantidad debe ser mayor a cero'.</li>
+                                <li><strong>Línea 5:</strong> Si la diferencia supera el 10% del stock registrado, el sistema genera alerta de discrepancia crítica y requiere autorización del Administrador para aceptar la conciliación.</li>
+                                <li><strong>Línea 6:</strong> Si el precio unitario no tiene registro de compra reciente, el sistema mantiene el último precio y marca el material como 'precio pendiente de actualización'.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- CU-04: GESTIÓN DE OBRAS Y SEGUIMIENTO DE RECURSOS -->
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header bg-warning text-dark py-3">
+                            <h5 class="mb-0">CU-04 — MÓDULO 4: GESTIÓN DE OBRAS Y SEGUIMIENTO DE RECURSOS</h5>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="fw-bold text-warning mb-3">Caso de Uso: Registrar obra y seguimiento de recursos</h6>
+                            <div class="table-responsive">
+                                <table class="table table-sm">
+                                    <tbody>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Código</td>
+                                            <td>CU-04</td>
+                                            <td class="fw-bold bg-light">Tipo</td>
+                                            <td>Primario</td>
+                                            <td class="fw-bold bg-light">Versión</td>
+                                            <td>1.1</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Actores</td>
+                                            <td colspan="5">Gerente (iniciador), Administrador de obra (responsable)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Propósito</td>
+                                            <td colspan="5">Permitir al Gerente registrar obras con sus fases y presupuesto, y al Administrador de obra asignar recursos, registrar avances y gastos, para mantener el control financiero y operativo de cada proyecto.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Resumen</td>
+                                            <td colspan="5">El Gerente crea la obra con sus fases y presupuesto. El Administrador asigna empleados, materiales y maquinaria. Se registran avances diarios y gastos con comprobantes.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Precondiciones</td>
+                                            <td colspan="5">El Gerente debe estar autenticado con rol de administración. Los empleados, materiales y maquinaria a asignar deben estar previamente registrados en el sistema.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Postcondiciones</td>
+                                            <td colspan="5">La obra queda registrada con fases (técnica, civil, acabados), fechas y presupuesto. Los recursos quedan vinculados a la obra. Los avances y gastos quedan registrados con sus comprobantes.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Referencias Cruzadas</td>
+                                            <td colspan="5">CU-02 (Solicitar material desde obra), CU-05 (Gestión de personal), CU-06 (Gestión de maquinaria)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h6 class="fw-bold mt-3 text-warning">Secuencia Normal de Eventos</h6>
+                            <div class="table-responsive mt-2">
+                                <table class="table table-bordered">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Acciones del Actor</th>
+                                            <th>Respuesta del Sistema</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>El Gerente accede al módulo de obras y crea una nueva obra.</td>
+                                            <td>El sistema solicita: nombre, ubicación (Sucre o El Alto), presupuesto total, fecha inicio, fecha fin e ingeniero responsable.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>El Gerente confirma los datos de la obra.</td>
+                                            <td>El sistema ejecuta &lt;&lt;include&gt;&gt; Registrar obra y llama a &lt;&lt;include&gt;&gt; Definir fases de obra: crea automáticamente las fases Técnica, Civil y Acabados con sus hitos de cronograma.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>El Gerente valida el presupuesto asignado a la obra.</td>
+                                            <td>El sistema ejecuta &lt;&lt;include&gt;&gt; Validar gasto por obra: registra el presupuesto aprobado y habilita el seguimiento de desviaciones.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>El Administrador de obra asigna los recursos necesarios.</td>
+                                            <td>El sistema ejecuta &lt;&lt;include&gt;&gt; Asignar recursos a obra y llama a &lt;&lt;include&gt;&gt; Asignar empleados y maquinaria: vincula personal por especialidad y equipos según disponibilidad.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>El Administrador registra el avance diario de la obra.</td>
+                                            <td>El sistema ejecuta &lt;&lt;include&gt;&gt; Registrar avance de obra: actualiza el porcentaje por fase y calcula el cumplimiento respecto al cronograma.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>El Administrador registra los gastos incurridos con sus comprobantes.</td>
+                                            <td>El sistema ejecuta &lt;&lt;include&gt;&gt; Registrar gasto por obra y llama a &lt;&lt;include&gt;&gt; Adjuntar comprobante: registra tipo de gasto (flete, materiales, viáticos), monto y factura.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>El Gerente solicita el reporte del estado financiero de la obra.</td>
+                                            <td>El sistema ejecuta &lt;&lt;include&gt;&gt; Generar reporte de obra: muestra avance vs cronograma y presupuesto vs gasto real. Si la desviación supera el 10%, ejecuta &lt;&lt;extend&gt;&gt; Alerta desviación presupuesto.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h6 class="fw-bold mt-3 text-danger">Cursos Alternos</h6>
+                            <ul class="small">
+                                <li><strong>Línea 1:</strong> Si ya existe una obra con el mismo nombre y ubicación, el sistema advierte la duplicidad y solicita confirmación del Gerente para continuar o modificar los datos.</li>
+                                <li><strong>Línea 4:</strong> Si un empleado o máquina ya está asignado a otra obra en el mismo período, el sistema muestra el conflicto e indica la obra en conflicto, requiriendo resolución antes de continuar.</li>
+                                <li><strong>Línea 6:</strong> Si se registra un gasto sin comprobante adjunto, el sistema guarda el gasto con estado 'pendiente de comprobante' y genera un recordatorio diario hasta que se complete.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- CU-05: GESTIÓN DE PERSONAL Y CONTROL DE ASISTENCIA -->
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header bg-danger text-white py-3">
+                            <h5 class="mb-0">CU-05 — MÓDULO 5: GESTIÓN DE PERSONAL Y CONTROL DE ASISTENCIA</h5>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="fw-bold text-danger mb-3">Caso de Uso: Gestionar personal y registrar asistencia</h6>
+                            <div class="table-responsive">
+                                <table class="table table-sm">
+                                    <tbody>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Código</td>
+                                            <td>CU-05</td>
+                                            <td class="fw-bold bg-light">Tipo</td>
+                                            <td>Primario</td>
+                                            <td class="fw-bold bg-light">Versión</td>
+                                            <td>1.1</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Actores</td>
+                                            <td colspan="5">Recursos Humanos (iniciador), Encargado de obra, Gerente (responsable)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Propósito</td>
+                                            <td colspan="5">Permitir a Recursos Humanos registrar empleados y contratistas, asignarlos a obras y calcular pagos por jornada. Al Encargado de obra registrar la asistencia diaria y horas trabajadas para eliminar el uso de planillas físicas.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Resumen</td>
+                                            <td colspan="5">Recursos Humanos registra al personal con su especialidad. El Encargado de obra los asigna a la obra y registra su asistencia diaria. El sistema calcula las horas trabajadas y los pagos por jornada.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Precondiciones</td>
+                                            <td colspan="5">Las obras activas deben estar registradas en el sistema. El catálogo de especialidades debe estar configurado. El Encargado debe estar autenticado y asignado a una obra activa.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Postcondiciones</td>
+                                            <td colspan="5">El empleado queda registrado con su especialidad y tipo de contrato. La asignación a obra queda vinculada con fechas y rol. La asistencia diaria queda registrada con horas trabajadas. El cálculo de jornales queda disponible para pagos.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Referencias Cruzadas</td>
+                                            <td colspan="5">CU-04 (Gestión de obras y recursos), CU-06 (Gestión de maquinaria y seguridad)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h6 class="fw-bold mt-3 text-warning">Secuencia Normal de Eventos (Resumida)</h6>
+                            <ul class="small">
+                                <li>Recursos Humanos accede al módulo de personal y registra al nuevo empleado (CI, nombre, teléfono, correo, tipo de contrato, salario)</li>
+                                <li>Sistema registra empleado y asigna especialidad (albañil, electricista, plomero, soldador, etc.)</li>
+                                <li>Recursos Humanos gestiona contratos de personal externo</li>
+                                <li>Sistema calcula pagos por jornadas</li>
+                                <li>El Encargado de obra asigna empleados según cronograma</li>
+                                <li>Sistema verifica disponibilidad</li>
+                                <li>El Encargado registra asistencia diaria</li>
+                                <li>Sistema registra horas trabajadas</li>
+                                <li>El Gerente revisa y aprueba reporte de productividad</li>
+                            </ul>
+
+                            <h6 class="fw-bold mt-3 text-danger">Cursos Alternos</h6>
+                            <ul class="small">
+                                <li><strong>Línea 2:</strong> Si ya existe un empleado con el mismo CI, el sistema detecta el duplicado, muestra los datos del registro existente y bloquea el nuevo registro hasta confirmar si es una actualización.</li>
+                                <li><strong>Línea 6:</strong> Si el Encargado intenta registrar asistencia fuera del período válido, el sistema bloquea el registro.</li>
+                                <li><strong>Línea 5:</strong> Si el empleado ya está asignado a otra obra en el mismo horario, el sistema muestra el conflicto de asignación con detalle de la obra en conflicto.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- CU-06: GESTIÓN DE MAQUINARIA, MANTENIMIENTO Y SEGURIDAD -->
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header bg-dark text-white py-3">
+                            <h5 class="mb-0">CU-06 — MÓDULO 6: GESTIÓN DE MAQUINARIA, MANTENIMIENTO Y SEGURIDAD</h5>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="fw-bold text-dark mb-3">Caso de Uso: Gestionar maquinaria, mantenimiento y seguridad del sistema</h6>
+                            <div class="table-responsive">
+                                <table class="table table-sm">
+                                    <tbody>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Código</td>
+                                            <td>CU-06</td>
+                                            <td class="fw-bold bg-light">Tipo</td>
+                                            <td>Secundario</td>
+                                            <td class="fw-bold bg-light">Versión</td>
+                                            <td>1.1</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Actores</td>
+                                            <td colspan="5">Administrador Obra (iniciador), Encargado de obra en campo, Administrador del sistema (responsable)</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Propósito</td>
+                                            <td colspan="5">Permitir registrar y controlar la maquinaria asignada a obras, registrar mantenimientos preventivos y correctivos, y gestionar usuarios con roles y permisos diferenciados para garantizar la trazabilidad y seguridad del sistema.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Resumen</td>
+                                            <td colspan="5">El Administrador de obra registra y asigna maquinaria. El Encargado en campo reporta el estado de los equipos. El Administrador del sistema gestiona usuarios, roles y permisos. Todo movimiento queda registrado en el historial de acciones para auditoría.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Precondiciones</td>
+                                            <td colspan="5">Las obras activas deben estar registradas. El catálogo de tipos de maquinaria debe estar configurado. Los roles y permisos base deben estar definidos en el sistema.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Postcondiciones</td>
+                                            <td colspan="5">La maquinaria queda registrada con tipo, estado y clasificación. Los mantenimientos quedan registrados con costo y responsable. Los usuarios quedan configurados con roles y permisos diferenciados. El historial de acciones queda disponible para auditoría.</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold bg-light">Referencias Cruzadas</td>
+                                            <td colspan="5">CU-04 (Gestión de obras y recursos), CU-05 (Gestión de personal)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h6 class="fw-bold mt-3 text-warning">Secuencia Normal de Eventos (Resumida)</h6>
+                            <ul class="small">
+                                <li>El Administrador de obra registra la maquinaria disponible (pesada, eléctrica, manual; propio o alquilado)</li>
+                                <li>El Administrador asigna la maquinaria a una obra según la fase del cronograma</li>
+                                <li>El Administrador registra el mantenimiento realizado al equipo</li>
+                                <li>Sistema registra costo mantenimiento y actualiza estado a 'operativa'</li>
+                                <li>El Encargado en campo detecta una falla y reporta el estado del equipo</li>
+                                <li>Si hay daño grave, ejecuta envío a servicios técnicos</li>
+                                <li>El Administrador del sistema crea o modifica usuarios y asigna roles</li>
+                                <li>Sistema configura permisos por rol (Gerente, Ingeniero, Enc. Almacén, Administrativo)</li>
+                                <li>Sistema genera historial de acciones automáticamente para auditoría</li>
+                            </ul>
+
+                            <h6 class="fw-bold mt-3 text-danger">Cursos Alternos</h6>
+                            <ul class="small">
+                                <li><strong>Línea 2:</strong> Si la maquinaria ya está asignada a otra obra en el mismo período, el sistema bloquea la asignación y muestra el conflicto con detalle de la obra en uso.</li>
+                                <li><strong>Línea 4:</strong> Si el Encargado reporta daño sin especificar el tipo de falla, el sistema obliga a seleccionar el tipo de falla de un catálogo predefinido antes de guardar el reporte.</li>
+                                <li><strong>Línea 5:</strong> Si se intenta eliminar un usuario con registros activos, el sistema bloquea la eliminación y ofrece únicamente la opción de desactivar el usuario, conservando su historial para auditoría.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Resumen Final -->
+                    <div class="alert alert-info border-left border-4 border-primary mt-5" role="alert">
+                        <h6 class="fw-bold mb-2">Documento de Referencia</h6>
+                        <p class="small mb-0"><strong>Constructora Ríos Herrera — Casos de Uso Expandido v1.1</strong> | Sistema de gestión de almacenes y control de inventarios | Versión 1.1 | Fecha: 08/06/2026</p>
                     </div>
                 </section>
             </div>
