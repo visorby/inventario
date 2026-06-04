@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagrama de Procesos - Sistema de Gestión de Almacenes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <span class="text-primary">Ríos</span>
+                <span class="text-warning">Herrera</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="marcoDropdown" role="button" data-bs-toggle="dropdown">
+                            Marco Teórico
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="marcoDropdown">
+                            <li><a class="dropdown-item" href="marco-teorico.html#introduccion">Introducción</a></li>
+                            <li><a class="dropdown-item" href="marco-teorico.html#antecedentes">Antecedentes</a></li>
+                            <li><a class="dropdown-item" href="marco-teorico.html#planteamiento">Planteamiento del Problema</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="analisisDropdown" role="button" data-bs-toggle="dropdown">
+                            Análisis Estructurado
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="analisisDropdown">
+                            <li><a class="dropdown-item" href="analisis-estructurado.html#declaracion">Declaración de Propósitos</a></li>
+                            <li><a class="dropdown-item" href="analisis-estructurado.html#diagrama">Diagrama de Contexto</a></li>
+                            <li><a class="dropdown-item" href="analisis-estructurado.html#eventos">Lista de Eventos</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="modelo-er.html">Modelo ER</a></li>
+                            <li><a class="dropdown-item" href="diagrama-procesos.html">Diagrama de Procesos</a></li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#" id="casosUsoDropdown" role="button" data-bs-toggle="dropdown">
+                                    Casos de Uso
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="casosUsoDropdown">
+                                    <li><a class="dropdown-item" href="casos-uso.html#caso-uso">Caso de Uso</a></li>
+                                    <li><a class="dropdown-item" href="casos-uso.html#caso-negocio">Caso de Uso de Negocio (CUN)</a></li>
+                                    <li><a class="dropdown-item" href="casos-uso.html#caso-expandido">Caso de Uso Expandido</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="orientado-objetos.html">Orientado A Objetos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="videos.html">Videos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactos.html">Contactos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BREADCRUMB -->
+    <div class="bg-light py-3">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                    <li class="breadcrumb-item"><a href="analisis-estructurado.html">Análisis Estructurado</a></li>
+                    <li class="breadcrumb-item active">Diagrama de Procesos</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- CONTENIDO -->
+    <div class="container py-5">
+        <div class="row">
+            <!-- SIDEBAR CON ÍNDICE -->
+            <div class="col-lg-3">
+                <div class="card shadow-sm border-0 sticky-top" style="top: 80px;">
+                    <div class="card-body">
+                        <h6 class="card-title fw-bold text-primary mb-3">ÍNDICE</h6>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#introduccion" class="text-decoration-none text-dark small">1. Introducción</a></li>
+                            <li class="mb-2"><a href="#procesos" class="text-decoration-none text-dark small">2. Procesos Principales</a></li>
+                            <li class="mb-2"><a href="#nivel0" class="text-decoration-none text-dark small">3. Nivel 0</a></li>
+                            <li class="mb-2"><a href="#nivel1" class="text-decoration-none text-dark small">4. Nivel 1</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTENIDO PRINCIPAL -->
+            <div class="col-lg-9">
+                <!-- Introducción -->
+                <section id="introduccion" class="mb-5 scroll-margin">
+                    <h2 class="fw-bold text-primary mb-3">Diagrama de Procesos</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <div class="card border-left border-primary border-4">
+                        <div class="card-body">
+                            <h6 class="fw-bold">¿Qué es un Diagrama de Procesos?</h6>
+                            <p class="mb-0">Es una representación visual de los procesos de negocio, mostrando el flujo de actividades, decisiones y datos entre los diferentes actores del sistema.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Procesos Principales -->
+                <section id="procesos" class="mb-5 scroll-margin">
+                    <h2 class="fw-bold text-primary mb-3">Procesos Principales</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Los procesos principales del sistema de gestión de almacenes son:</p>
+                    <div class="list-group">
+                        <div class="list-group-item">
+                            <h6 class="fw-bold text-warning">Recepción de Materiales</h6>
+                            <p class="mb-0">Proceso de ingreso de productos al almacén desde proveedores.</p>
+                        </div>
+                        <div class="list-group-item">
+                            <h6 class="fw-bold text-warning">Almacenamiento</h6>
+                            <p class="mb-0">Organización y ubicación de productos en el almacén.</p>
+                        </div>
+                        <div class="list-group-item">
+                            <h6 class="fw-bold text-warning">Distribución</h6>
+                            <p class="mb-0">Entrega de productos a proyectos o clientes finales.</p>
+                        </div>
+                        <div class="list-group-item">
+                            <h6 class="fw-bold text-warning">Control de Inventario</h6>
+                            <p class="mb-0">Monitoreo y actualización de existencias.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Nivel 0 -->
+                <section id="nivel0" class="mb-5 scroll-margin">
+                    <h2 class="fw-bold text-primary mb-3">Nivel 0 - Diagrama de Contexto</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. El diagrama de nivel 0 muestra el sistema como una única entidad.</p>
+                    <img src="https://via.placeholder.com/600x300/1f3a93/ffffff?text=Diagrama+Nivel+0" alt="Diagrama Nivel 0" class="img-fluid rounded my-3">
+                </section>
+
+                <!-- Nivel 1 -->
+                <section id="nivel1" class="mb-5 scroll-margin">
+                    <h2 class="fw-bold text-primary mb-3">Nivel 1 - Procesos Desagregados</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. El diagrama de nivel 1 desglosa los procesos principales en subprocesos.</p>
+                    <img src="https://via.placeholder.com/600x300/ff8c00/ffffff?text=Diagrama+Nivel+1" alt="Diagrama Nivel 1" class="img-fluid rounded my-3">
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary text-white py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-3">ENLACES RÁPIDOS</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
+                        <li><a href="marco-teorico.html" class="text-white text-decoration-none">Marco Teórico</a></li>
+                        <li><a href="analisis-estructurado.html" class="text-white text-decoration-none">Análisis Estructurado</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-3">ANÁLISIS</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="modelo-er.html" class="text-white text-decoration-none">Modelo ER</a></li>
+                        <li><a href="diagrama-procesos.html" class="text-white text-decoration-none">Diagrama de Procesos</a></li>
+                        <li><a href="casos-uso.html" class="text-white text-decoration-none">Casos de Uso</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-3">RECURSOS</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="orientado-objetos.html" class="text-white text-decoration-none">Orientado a Objetos</a></li>
+                        <li><a href="videos.html" class="text-white text-decoration-none">Videos</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-3">CONTACTO</h6>
+                    <p class="small">Constructora Ríos Herrera<br>
+                    Sucre - El Alto, Bolivia<br>
+                    <a href="contactos.html" class="text-white text-decoration-none">Más información</a></p>
+                </div>
+            </div>
+            <hr class="bg-white">
+            <p class="text-center mb-0 small">&copy; 2024 Constructora Ríos Herrera. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="public/js/script.js"></script>
+</body>
+</html>
