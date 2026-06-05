@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diagrama de Procesos - Sistema de Gestión de Almacenes</title>
+    <title>Orientado A Objetos - Sistema de Gestión de Almacenes</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -34,7 +34,7 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="#" id="analisisDropdown" role="button" data-bs-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="analisisDropdown" role="button" data-bs-toggle="dropdown">
                             Análisis Estructurado
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="analisisDropdown">
@@ -57,7 +57,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="orientado-objetos.html">Orientado A Objetos</a>
+                        <a class="nav-link active" href="orientado-objetos.html">Orientado A Objetos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="videos.html">Videos</a>
@@ -76,8 +76,7 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb mb-0">
                     <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
-                    <li class="breadcrumb-item"><a href="analisis-estructurado.html">Análisis Estructurado</a></li>
-                    <li class="breadcrumb-item active">Diagrama de Procesos</li>
+                    <li class="breadcrumb-item active">Orientado A Objetos</li>
                 </ol>
             </nav>
         </div>
@@ -85,117 +84,169 @@
 
     <!-- CONTENIDO -->
     <div class="container py-5">
-        <div class="row">
-            <!-- SIDEBAR CON ÍNDICE -->
-            <div class="col-lg-3">
-                <div class="card shadow-sm border-0 sticky-top" style="top: 80px;">
-                    <div class="card-body">
-                        <h6 class="card-title fw-bold text-primary mb-3">ÍNDICE</h6>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><a href="#introduccion" class="text-decoration-none text-dark small">1. Introducción</a></li>
-                            <li class="mb-2"><a href="#procesos" class="text-decoration-none text-dark small">2. Procesos Principales</a></li>
-                            <li class="mb-2"><a href="#nivel0" class="text-decoration-none text-dark small">3. Nivel 0</a></li>
-                            <li class="mb-2"><a href="#nivel1" class="text-decoration-none text-dark small">4. Nivel 1</a></li>
-                        </ul>
+        <h1 class="fw-bold text-primary mb-5">Programación Orientada a Objetos (POO) y Diagrama de Clases</h1>
+
+        <section id="poo" class="mb-5">
+            <h2 class="fw-bold text-primary mb-3">Programación Orientada a Objetos (POO)</h2>
+            <p>La Programación Orientada a Objetos es un paradigma de desarrollo de software que organiza el diseño del sistema alrededor de "objetos" en lugar de funciones aisladas. Este enfoque permite modelar elementos del mundo real, transformándolos en componentes de software modulares y altamente reutilizables.</p>
+            <p>Para lograrlo, el paradigma se estructura sobre cuatro pilares fundamentales que guían la arquitectura del código: la abstracción, el encapsulamiento, la herencia y el polimorfismo.</p>
+        </section>
+
+        <section id="diagrama-clases" class="mb-5">
+            <h2 class="fw-bold text-primary mb-3">Diagrama de Clases</h2>
+            <p>El Diagrama de Clases es una herramienta gráfica del Lenguaje de Modelado Unificado (UML) que representa la estructura estática de un sistema informático. Este modelo visual especifica las clases que formarán el sistema, detallando sus atributos internos, sus métodos o funciones operativas, y la manera exacta en que los objetos se relacionan e interactúan entre sí.</p>
+            <p>Cada clase se dibuja como un bloque dividido en tres secciones superpuestas: el nombre de la entidad, la lista de variables o propiedades, y el conjunto de acciones que puede ejecutar. El verdadero potencial del diagrama radica en plasmar las conexiones lógicas del negocio, tales como la herencia, la asociación, la agregación y la composición, sirviendo como el plano arquitectónico definitivo antes de proceder con la fase de codificación.</p>
+        </section>
+
+        <section id="conceptos" class="mb-5">
+            <h2 class="fw-bold text-primary mb-3">Conceptos Fundamentales</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">Clases</h5>
+                            <p class="card-text">Una clase es una plantilla o molde para crear objetos con propiedades y comportamientos definidos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">Objetos</h5>
+                            <p class="card-text">Los objetos son instancias de una clase que poseen atributos y pueden ejecutar métodos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">Atributos</h5>
+                            <p class="card-text">Son las características o propiedades que posee un objeto, también llamadas variables o datos miembro.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">Métodos</h5>
+                            <p class="card-text">Son las acciones o comportamientos que pueden ejecutar los objetos de una clase, representados mediante funciones.</p>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- CONTENIDO PRINCIPAL -->
-            <div class="col-lg-9">
-                <!-- Introducción -->
-                <section id="introduccion" class="mb-5 scroll-margin">
-                    <h2 class="fw-bold text-primary mb-3">Diagrama de Procesos</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <div class="card border-left border-primary border-4">
-                        <div class="card-body">
-                            <h6 class="fw-bold">¿Qué es un Diagrama de Procesos?</h6>
-                            <p class="mb-0">Es una representación visual de los procesos de negocio, mostrando el flujo de actividades, decisiones y datos entre los diferentes actores del sistema.</p>
+        <section id="principios" class="mb-5">
+            <h2 class="fw-bold text-primary mb-3">Principios de OOP</h2>
+            
+            <div class="accordion" id="accordionOOP">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            Encapsulación
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionOOP">
+                        <div class="accordion-body">
+                            La encapsulación permite ocultar los detalles internos de un objeto y exponer solo las interfaces públicas necesarias. Esto mejora la seguridad y facilita el mantenimiento del código.
                         </div>
                     </div>
-                </section>
-
-                <!-- Procesos Principales -->
-                <section id="procesos" class="mb-5 scroll-margin">
-                    <h2 class="fw-bold text-primary mb-3">Procesos Principales</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Los procesos principales del sistema de gestión de almacenes son:</p>
-                    <div class="list-group">
-                        <div class="list-group-item">
-                            <h6 class="fw-bold text-warning">Recepción de Materiales</h6>
-                            <p class="mb-0">Proceso de ingreso de productos al almacén desde proveedores.</p>
-                        </div>
-                        <div class="list-group-item">
-                            <h6 class="fw-bold text-warning">Almacenamiento</h6>
-                            <p class="mb-0">Organización y ubicación de productos en el almacén.</p>
-                        </div>
-                        <div class="list-group-item">
-                            <h6 class="fw-bold text-warning">Distribución</h6>
-                            <p class="mb-0">Entrega de productos a proyectos o clientes finales.</p>
-                        </div>
-                        <div class="list-group-item">
-                            <h6 class="fw-bold text-warning">Control de Inventario</h6>
-                            <p class="mb-0">Monitoreo y actualización de existencias.</p>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            Herencia
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionOOP">
+                        <div class="accordion-body">
+                            La herencia permite crear nuevas clases basadas en clases existentes, reutilizando código y estableciendo relaciones jerárquicas entre objetos. Una clase derivada hereda atributos y métodos de su clase base.
                         </div>
                     </div>
-                </section>
-
-                <!-- Nivel 0 -->
-                <section id="nivel0" class="mb-5 scroll-margin">
-                    <h2 class="fw-bold text-primary mb-3">Nivel 0 - Diagrama de Contexto</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. El diagrama de nivel 0 muestra el sistema como una única entidad.</p>
-                    <img src="https://via.placeholder.com/600x300/1f3a93/ffffff?text=Diagrama+Nivel+0" alt="Diagrama Nivel 0" class="img-fluid rounded my-3">
-                </section>
-
-                <!-- Nivel 1 -->
-                <section id="nivel1" class="mb-5 scroll-margin">
-                    <h2 class="fw-bold text-primary mb-3">Nivel 1 - Procesos Desagregados</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. El diagrama de nivel 1 desglosa los procesos principales en subprocesos.</p>
-                    <img src="https://via.placeholder.com/600x300/ff8c00/ffffff?text=Diagrama+Nivel+1" alt="Diagrama Nivel 1" class="img-fluid rounded my-3">
-                </section>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            Polimorfismo
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionOOP">
+                        <div class="accordion-body">
+                            El polimorfismo permite que objetos de diferentes clases respondan al mismo mensaje de manera diferente, permitiendo una interfaz común con implementaciones específicas.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                            Abstracción
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionOOP">
+                        <div class="accordion-body">
+                            La abstracción se refiere al proceso de modelar características esenciales de un objeto mientras se ignoran los detalles innecesarios, simplificando la complejidad del sistema.
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <section id="diagrama-clases-ejemplo" class="mb-5">
+            <h2 class="fw-bold text-primary mb-3">Diagrama de Clases</h2>
+            <p>En el contexto de nuestro sistema de gestión de almacenes, la estructura lógica y las relaciones entre los componentes se representan mediante el siguiente diagrama:</p>
+            
+            <div class="text-center mb-4">
+                <img src="public/img/UML.png" alt="Diagrama de Clases del Sistema de Almacén" class="img-fluid rounded shadow-sm border">
+            </div> 
+        </section>
+        
     </div>
 
     <!-- FOOTER -->
-    <footer class="bg-primary text-white py-5 mt-5">
+    <footer class="bg-dark text-white py-4 mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <h6 class="fw-bold mb-3">ENLACES RÁPIDOS</h6>
+                    <h6 class="fw-bold mb-3">Navegación</h6>
                     <ul class="list-unstyled">
                         <li><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
                         <li><a href="marco-teorico.html" class="text-white text-decoration-none">Marco Teórico</a></li>
-                        <li><a href="analisis-estructurado.html" class="text-white text-decoration-none">Análisis Estructurado</a></li>
+                        <li><a href="analisis-estructurado.html" class="text-white text-decoration-none">Análisis</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
-                    <h6 class="fw-bold mb-3">ANÁLISIS</h6>
+                    <h6 class="fw-bold mb-3">Información</h6>
                     <ul class="list-unstyled">
-                        <li><a href="modelo-er.html" class="text-white text-decoration-none">Modelo ER</a></li>
-                        <li><a href="diagrama-procesos.html" class="text-white text-decoration-none">Diagrama de Procesos</a></li>
-                        <li><a href="casos-uso.html" class="text-white text-decoration-none">Casos de Uso</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h6 class="fw-bold mb-3">RECURSOS</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="orientado-objetos.html" class="text-white text-decoration-none">Orientado a Objetos</a></li>
+                        <li><a href="orientado-objetos.html" class="text-white text-decoration-none">POO</a></li>
                         <li><a href="videos.html" class="text-white text-decoration-none">Videos</a></li>
+                        <li><a href="contactos.html" class="text-white text-decoration-none">Contacto</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
-                    <h6 class="fw-bold mb-3">CONTACTO</h6>
-                    <p class="small">Constructora Ríos Herrera<br>
-                    Sucre - El Alto, Bolivia<br>
-                    <a href="contactos.html" class="text-white text-decoration-none">Más información</a></p>
+                    <h6 class="fw-bold mb-3">Recursos</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Documentos</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Descargas</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-3">Empresa</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Sobre Nosotros</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Privacidad</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Términos</a></li>
+                    </ul>
                 </div>
             </div>
-            <hr class="bg-white">
-            <p class="text-center mb-0 small">&copy; 2024 Constructora Ríos Herrera. Todos los derechos reservados.</p>
+            <hr class="bg-secondary">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2026 Constructora Ríos Herrera. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="public/js/script.js"></script>
 </body>
 </html>
