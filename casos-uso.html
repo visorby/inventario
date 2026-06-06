@@ -136,54 +136,81 @@
                 <!-- Caso de Uso de Negocio -->
                 <section id="caso-negocio" class="mb-5 scroll-margin">
                     <h2 class="fw-bold text-primary mb-3">Caso de Uso de Negocio (CUN)</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <div class="card border-left border-warning border-4">
+                    <p>Un diagrama de caso de uso de negocio (CUN) es un diagrama de caso de uso en el que el sistema que modela es el área de negocio del mundo real. Ofrece una visión general de los procesos y servicios (CUN) y las entidades que utilizan esos servicios o participan en su implementación.</p>
+                    
+                    <div class="card border-left border-warning border-4 mb-4">
                         <div class="card-body">
-                            <h6 class="fw-bold">Definición</h6>
+                             <h6 class="fw-bold">Definición</h6>
                             <p class="mb-0">Un Caso de Uso de Negocio describe procesos de negocio de mayor nivel que pueden involucrar múltiples casos de uso del sistema.</p>
                         </div>
                     </div>
-                    <h6 class="fw-bold mt-4 text-warning">CUNs del Sistema:</h6>
-                    <div class="accordion mt-3" id="cunAccordion">
+                   
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-light">
+                            <h6 class="fw-bold mb-0 text-dark">Diagrama General del Modelo de Casos de Uso de Negocio (MCUN)</h6>
+                        </div>
+                        <div class="card-body text-center bg-white">
+                            <img src="ruta-de-tu-imagen.png" alt="Diagrama de Caso de Uso de Negocio Integral" class="img-fluid rounded border mb-2" style="max-height: 550px;">
+                            <div class="form-text text-muted">Vista panorámica de la interacción entre Actores de Negocio (AN) y Objetivos de Negocio (ON).</div>
+                        </div>
+                    </div>
+
+                    <h6 class="fw-bold text-dark mb-3">Estructura y Explicación por Objetivos de Negocio:</h6>
+                    <div class="accordion" id="cunAccordion">       
+                        
                         <div class="accordion-item">
                             <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#cun1">
-                                    CUN001: Proceso de Recepción de Materiales
+                                <button class="accordion-button text-dark fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#cun1">
+                                    ON-01: Control Presupuestario y Gestión de Adquisiciones
                                 </button>
                             </h2>
                             <div id="cun1" class="accordion-collapse collapse show" data-bs-parent="#cunAccordion">
                                 <div class="accordion-body">
-                                    <p>Proceso completo que incluye la verificación, registro e ingreso de nuevos materiales al almacén. Involucra múltiples casos de uso técnicos.</p>
+                                    <p><strong>Explicación en el Diagrama:</strong> Este objetivo regula la inversión de capital en insumos para evitar compras desmedidas o desvíos de fondos en las sucursales:</p>
+                                    <ul>
+                                        <li>El proceso base <span class="text-info"><strong>CUN1: Abastecer Almacén</strong></span> requiere obligatoriamente (<code>&lt;&lt;include&gt;&gt;</code>) pasar por la aprobación formal del actor de negocio <span class="text-success"><strong>AN1: Administrativo</strong></span> en <span class="text-info"><strong>CUN2: Aprobar orden de compra</strong></span>.</li>
+                                        <li>Para proteger las finanzas, el flujo se extiende (<code>&lt;&lt;extend&gt;&gt;</code>) condicionalmente hacia <span class="text-info"><strong>CUN3: Validar Presupuesto</strong></span>, un subproceso crítico que a su vez depende de que el actor de negocio <span class="text-success"><strong>AN2: Gerente</strong></span> ejecute la acción de <span class="text-info"><strong>CUN4: Autorizar Presupuesto extra</strong></span> cuando los frentes de obra superan los costos estimados iniciales.</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
+
                         <div class="accordion-item">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cun2">
-                                    CUN002: Proceso de Distribución
+                                <button class="accordion-button collapsed text-dark fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#cun2">
+                                    ON-02: Optimizar la Trazabilidad y Logística de Despacho a Obra
                                 </button>
                             </h2>
                             <div id="cun2" class="accordion-collapse collapse" data-bs-parent="#cunAccordion">
                                 <div class="accordion-body">
-                                    <p>Proceso de entrega de materiales a proyectos o clientes finales, incluyendo preparación, empaque y documentación.</p>
+                                    <p><strong>Explicación en el Diagrama:</strong> Este objetivo asegura el control estricto de los movimientos internos de materiales, garantizando que ningún insumo salga del almacén central sin dejar rastro digital:</p>
+                                    <ul>
+                                        <li>El actor de negocio <span class="text-success"><strong>AN3: Empleado</strong></span> (frente de obra) inicia la interacción al ejecutar el proceso <span class="text-info"><strong>CUN5: Solicitar Insumos</strong></span>.</li>
+                                        <li>El actor de negocio <span class="text-success"><strong>AN4: Encargado de Almacén</strong></span> procesa esto a través del nodo central <span class="text-info"><strong>CUN6: Despachar Materiales de Obra</strong></span>, el cual incluye obligatoriamente (<code>&lt;&lt;include&gt;&gt;</code>) la tarea de <span class="text-info"><strong>CUN7: Verificar existencias</strong></span> en el sistema digital antes de proceder físicamente a <span class="text-info"><strong>CUN8: Realizar Entrega de Materiales</strong></span>.</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
+
                         <div class="accordion-item">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cun3">
-                                    CUN003: Proceso de Control de Inventario
+                                <button class="accordion-button collapsed text-dark fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#cun3">
+                                    ON-03: Mitigar Mermas de Stock y Controlar Activos (Maquinaria)
                                 </button>
                             </h2>
                             <div id="cun3" class="accordion-collapse collapse" data-bs-parent="#cunAccordion">
                                 <div class="accordion-body">
-                                    <p>Proceso de monitoreo, auditoría y reporte del estado del inventario en tiempo real.</p>
+                                    <p><strong>Explicación en el Diagrama:</strong> Este objetivo actúa como la capa de seguridad operativa e inventario real del proyecto, resolviendo pérdidas por descuido o averías:</p>
+                                    <ul>
+                                        <li>El proceso de auditoría continua <span class="text-info"><strong>CUN9: Gestionar Inventario</strong></span> fuerza la ejecución de <span class="text-info"><strong>CUN7: Verificar existencias</strong></span>. Si se detecta un desfase físico o lógico, se dispara una extensión (<code>&lt;&lt;extend&gt;&gt;</code>) para <span class="text-info"><strong>CUN10: Reportar faltante de Stock</strong></span> y coordinar la compra oportuna mediante <span class="text-info"><strong>CUN11: Gestionar Reposición de Stock</strong></span>.</li>
+                                        <li>Regla de Negocio para Maquinaria: Cuando el actor <span class="text-success"><strong>AN3: Empleado</strong></span> detecta un desperfecto físico, el proceso <span class="text-info"><strong>CUN12: Reportar Maquinaria Averiada</strong></span> extiende condicionalmente (<code>&lt;&lt;extend&gt;&gt;</code>) el flujo ordinario de entrega, forzando la inclusión obligatoria (<code>&lt;&lt;include&gt;&gt;</code>) de la acción <span class="text-info"><strong>CUN13: Enviar a Mantenimiento</strong></span> para bloquear su uso.</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </section>
-
                 <!-- Caso de Uso Expandido -->
                 <section id="caso-expandido" class="mb-5 scroll-margin">
                     <h2 class="fw-bold text-primary mb-3">Casos de Uso Expandido</h2>
