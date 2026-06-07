@@ -92,7 +92,28 @@
                     <div class="card-body">
                         <h6 class="card-title fw-bold text-primary mb-3">ÍNDICE</h6>
                         <ul class="list-unstyled">
-                            <li class="mb-2"><a href="#caso-uso" class="text-decoration-none text-dark small">1. Caso de Uso</a></li>
+                            <li class="mb-2"><a href="#caso-uso" class="text-decoration-none text-dark small">1. Caso de Uso</a>
+                            <ul class="list-unstyled ms-3 mt-1">
+                                <li>
+                                    <a href="#componentes-diagrama"
+                                        class="text-decoration-none text-secondary small">
+                                        1.1 Componentes del Diagrama
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#proceso-modelado"
+                                        class="text-decoration-none text-secondary small">
+                                        1.2 Proceso de Elaboración
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#diagramas-desarrollados"
+                                        class="text-decoration-none text-secondary small">
+                                        1.3 Diagramas Desarrollados
+                                    </a>
+                                </li>
+                            </ul>
+                            </li>
                             <li class="mb-2"><a href="#caso-negocio" class="text-decoration-none text-dark small">2. Caso de Uso de Negocio (CUN)</a></li>
                             <li class="mb-2"><a href="#caso-expandido" class="text-decoration-none text-dark small">3. Caso de Uso Expandido</a></li>
                         </ul>
@@ -104,33 +125,623 @@
             <div class="col-lg-9">
                 <!-- Caso de Uso -->
                 <section id="caso-uso" class="mb-5 scroll-margin">
-                    <h2 class="fw-bold text-primary mb-3">Caso de Uso</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-                    <div class="card border-left border-primary border-4">
+                    <h2 class="fw-bold text-primary mb-3">
+                        Diagrama de Casos de Uso
+                    </h2>
+                    <p>
+                        Durante la etapa de análisis se desarrolló el Diagrama de Casos de Uso
+                        del Sistema de Gestión de Almacenes y Control de Inventarios para la
+                        Constructora Ríos Herrera. Este diagrama permitió identificar los
+                        actores involucrados, las funcionalidades principales del sistema y las
+                        relaciones existentes entre ellas.
+                    </p>
+                    <div class="card border-left border-primary border-4 mb-4">
                         <div class="card-body">
                             <h6 class="fw-bold">Definición</h6>
-                            <p class="mb-0">Un Caso de Uso es una secuencia de acciones que describe una interacción entre un actor y el sistema, mostrando cómo el sistema responde a una solicitud del usuario.</p>
+                            <p class="mb-0">
+                                Un caso de uso describe una funcionalidad del sistema desde la
+                                perspectiva del usuario, mostrando la interacción entre los
+                                actores y el sistema para alcanzar un objetivo específico.
+                            </p>
                         </div>
                     </div>
-                    <h6 class="fw-bold mt-4 text-warning">Casos de Uso del Sistema:</h6>
-                    <ul class="list-group list-group-flush mt-3">
-                        <li class="list-group-item">
-                            <strong>UC001:</strong> Registrar Entrada de Producto
-                            <p class="mb-0 small text-muted">El encargado registra un nuevo producto en el almacén.</p>
-                        </li>
-                        <li class="list-group-item">
-                            <strong>UC002:</strong> Consultar Disponibilidad de Stock
-                            <p class="mb-0 small text-muted">El usuario consulta la disponibilidad de un producto específico.</p>
-                        </li>
-                        <li class="list-group-item">
-                            <strong>UC003:</strong> Generar Salida de Producto
-                            <p class="mb-0 small text-muted">Se registra la salida de un producto del almacén.</p>
-                        </li>
-                        <li class="list-group-item">
-                            <strong>UC004:</strong> Generar Reporte de Inventario
-                            <p class="mb-0 small text-muted">Sistema genera un reporte del estado actual del inventario.</p>
-                        </li>
-                    </ul>
+                    <h4 class="fw-bold text-warning mb-3">
+                        Objetivo del Diagrama
+                    </h4>
+                    <p>
+                        El modelado de casos de uso permitió representar de forma gráfica los
+                        procesos principales de la empresa, identificando las responsabilidades
+                        de cada actor y organizando las funcionalidades del sistema en módulos
+                        funcionales para facilitar su comprensión y posterior desarrollo.
+                    </p>
+                    <h4 class="fw-bold text-warning mt-4 mb-3 scroll-margin" id="componentes-diagrama">
+                        Componentes del Diagrama
+                    </h4>
+                    <p>
+                    Para la construcción del Diagrama de Casos de Uso se emplearon los siguientes
+                    elementos, los cuales permiten representar las interacciones entre los actores
+                    y las funcionalidades del sistema.
+                    </p>
+                    <div class="row g-4">
+
+                        <!-- Actor -->
+                        <div class="col-md-6">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body text-center">
+
+                                    <img src="/inventario/public/img/casosDeUso/monigote.png"
+                                        alt="Actor"
+                                        class="img-fluid mb-3"
+                                        style="max-height: 120px;">
+
+                                    <h5 class="fw-bold">
+                                        Actor
+                                    </h5>
+
+                                    <p>
+                                        Representa una persona, organización o entidad externa
+                                        que interactúa con el sistema para realizar una acción.
+                                    </p>
+
+                                    <small class="text-muted">
+                                        Se representa mediante una figura humana (monigote).
+                                    </small>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Caso de Uso -->
+                        <div class="col-md-6">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body text-center">
+                                    <img src="/inventario/public/img/casosDeUso/casouso.png"
+                                        alt="Caso de Uso"
+                                        class="img-fluid mb-3"
+                                        style="max-height: 120px;">
+                                    <h5 class="fw-bold">
+                                        Caso de Uso
+                                    </h5>
+                                    <p>
+                                        Representa una funcionalidad o servicio proporcionado por
+                                        el sistema a sus usuarios.
+                                    </p>
+                                    <small class="text-muted">
+                                        Se representa mediante una elipse u óvalo.
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Asociación -->
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body text-center">
+                                    <img src="/inventario/public/img/casosDeUso/asociacion.png"
+                                        alt="Asociación"
+                                        class="img-fluid mb-3"
+                                        style="max-height: 80px;">
+                                    <h6 class="fw-bold">
+                                        Asociación
+                                    </h6>
+                                    <p class="mb-2">
+                                        Conecta a un actor con un caso de uso.
+                                    </p>
+                                    <small class="text-muted">
+                                        Representada mediante una línea continua.
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Include -->
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body text-center">
+                                    <img src="/inventario/public/img/casosDeUso/include.png"
+                                        alt="Include"
+                                        class="img-fluid mb-3"
+                                        style="max-height: 80px;">
+                                    <h6 class="fw-bold">
+                                        Relación «include»
+                                    </h6>
+                                    <p class="mb-2">
+                                        Indica que un caso de uso requiere obligatoriamente otro.
+                                    </p>
+                                    <small class="text-muted">
+                                        Flecha punteada con la etiqueta «include».
+                                        La flecha apunta hacia el caso de uso que será incluido.
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Extend -->
+                        <div class="col-md-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body text-center">
+                                    <img src="/inventario/public/img/casosDeUso/extend.png"
+                                        alt="Extend"
+                                        class="img-fluid mb-3"
+                                        style="max-height: 80px;">
+                                    <h6 class="fw-bold">
+                                        Relación «extend»
+                                    </h6>
+                                    <p class="mb-2">
+                                        Agrega funcionalidades opcionales o condicionales.
+                                        La flecha apunta hacia el caso de uso principal que está siendo extendido.
+                                    </p>
+                                    <small class="text-muted">
+                                        Flecha punteada con la etiqueta «extend».
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="fw-bold text-warning mt-5 mb-3 scroll-margin" id="proceso-modelado">
+                        Proceso de Modelado del Sistema
+                    </h4>
+                    <p>
+                    Se puede empezar en modelarlo con papel y lapiz, despues usar esa base para elaborarlo en alguna herramienta para realizar este tipo de diagramas como draw.io, RSA, etc. 
+                    </p>
+                    <p>
+                    Para la elaboración del Diagrama de Casos de Uso se siguió un proceso de análisis que permitió identificar los actores, funcionalidades y relaciones presentes en el sistema. 
+                    </p>
+                    <div class="accordion" id="modeladoAccordion">
+                        <!-- Paso 1 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#paso1">
+                                    Paso 1: Identificar los Actores
+                                </button>
+                            </h2>
+
+                            <div id="paso1"
+                                class="accordion-collapse collapse show"
+                                data-bs-parent="#modeladoAccordion">
+                                <div class="accordion-body">
+                                    <p>
+                                        Se identificaron todas las personas y entidades que interactúan con el sistema, determinando sus responsabilidades dentro de los procesos de almacén, inventario, obras y recursos.
+                                    </p>
+                                    <h6 class="fw-bold">
+                                        Actores identificados:
+                                    </h6>
+                                    <ul>
+                                        <li>Gerente</li>
+                                        <li>Ingeniero</li>
+                                        <li>Encargado de Almacén</li>
+                                        <li>Administrador de Obra</li>
+                                        <li>Encargado de Obra</li>
+                                        <li>Recursos Humanos</li>
+                                        <li>Proveedor</li>
+                                        <li>Administrador</li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Paso 2 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#paso2">
+                                    Paso 2: Identificar las Funcionalidades
+                                </button>
+                            </h2>
+                            <div id="paso2"
+                                class="accordion-collapse collapse"
+                                data-bs-parent="#modeladoAccordion">
+                                <div class="accordion-body">
+                                    <p>
+                                        Se analizaron las actividades realizadas por la empresa para determinar qué funciones debía ofrecer el sistema.
+                                    </p>
+                                    <h6 class="fw-bold">
+                                        Funcionalidades identificadas:
+                                    </h6>
+                                    <ul>
+                                        <li>Gestión de compras.</li>
+                                        <li>Control de inventario.</li>
+                                        <li>Despacho de materiales.</li>
+                                        <li>Seguimiento de obras.</li>
+                                        <li>Control de personal.</li>
+                                        <li>Gestión de maquinaria.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Paso 3 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#paso3">
+                                    Paso 3: Organización de los casos de uso en modulos
+                                </button>
+                            </h2>
+                            <div id="paso3"
+                                class="accordion-collapse collapse"
+                                data-bs-parent="#modeladoAccordion">
+                                <div class="accordion-body">
+                                    <p>
+                                        Debido a la complejidad y alcance del Sistema los casos de uso identificados fueron organizados en módulos funcionales para facilitar su comprensión y representación.
+                                    </p>
+                                    <h6 class="fw-bold">
+                                        Módulos definidos:
+                                    </h6>
+                                    <ul>
+                                        <li>Gestión de Abastecimiento y Compras.</li>
+                                        <li>Solicitud de Materiales y Despacho a Obra.</li>
+                                        <li>Control de Inventario y Movimientos de Almacén.</li>
+                                        <li>Gestión de Obras y Seguimiento de Recursos.</li>
+                                        <li>Gestión de Personal y Control de Asistencia.</li>
+                                        <li>Gestión de Maquinaria, Mantenimiento y Seguridad.</li>
+                                    </ul>
+                                    <p class="mb-0">
+                                        Cada módulo agrupa funcionalidades relacionadas entre sí,
+                                        permitiendo una representación más ordenada del sistema.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Paso 4 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#paso4">
+                                    Paso 4: Definición de Relaciones
+                                </button>
+                            </h2>
+                            <div id="paso4"
+                                class="accordion-collapse collapse"
+                                data-bs-parent="#modeladoAccordion">
+                                <div class="accordion-body">
+                                    <p>
+                                        Una vez identificados los actores y funcionalidades, se
+                                        establecieron las relaciones necesarias para representar las
+                                        interacciones y dependencias existentes dentro del sistema.
+                                    </p>
+                                    <h6 class="fw-bold">
+                                        Relaciones utilizadas:
+                                    </h6>
+                                    <ul>
+                                        <li>
+                                            <strong>Asociación:</strong>
+                                            utilizada para representar la interacción directa entre un
+                                            actor y un caso de uso.
+                                        </li>
+                                        <li>
+                                            <strong>«include»:</strong>
+                                            utilizada cuando una funcionalidad requiere obligatoriamente
+                                            la ejecución de otra.
+                                        </li>
+                                        <li>
+                                            <strong>«extend»:</strong>
+                                            utilizada para modelar comportamientos opcionales o
+                                            situaciones específicas que amplían una funcionalidad.
+                                        </li>
+                                    </ul>
+                                    <p class="mb-0">
+                                        Estas relaciones permitieron modelar de forma precisa los
+                                        procesos de negocio y las dependencias existentes entre las
+                                        distintas funcionalidades del sistema.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Paso 5 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#paso5">
+                                    Paso 5: Elaboración de los Diagramas
+                                </button>
+                            </h2>
+                            <div id="paso5"
+                                class="accordion-collapse collapse"
+                                data-bs-parent="#modeladoAccordion">
+                                <div class="accordion-body">
+                                    <p>
+                                        Con los actores, funcionalidades y relaciones previamente
+                                        identificados, se procedió a la construcción de los Diagramas
+                                        de Casos de Uso utilizando la herramienta Draw.io.
+                                    </p>
+                                    <p>
+                                        Durante esta etapa se representaron gráficamente las
+                                        interacciones entre los actores y el sistema, organizando los
+                                        casos de uso dentro de los módulos funcionales definidos en el
+                                        análisis.
+                                    </p>
+                                    <h6 class="fw-bold">
+                                        Actividades realizadas:
+                                    </h6>
+                                    <ul>
+                                        <li>Diseño de los diagramas en Draw.io.</li>
+                                        <li>Representación de actores y casos de uso.</li>
+                                        <li>Incorporación de relaciones de asociación, «include» y «extend».</li>
+                                        <li>Organización de los casos de uso por módulos funcionales.</li>
+                                        <li>Revisión y validación de la consistencia del modelo.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Paso 6 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#paso6">
+                                    Paso 6: Resultado Obtenido
+                                </button>
+                            </h2>
+                            <div id="paso6"
+                                class="accordion-collapse collapse"
+                                data-bs-parent="#modeladoAccordion">
+                                <div class="accordion-body">
+                                    <p>
+                                        Como resultado del proceso de modelado se obtuvo un conjunto de Diagramas de Casos de Uso que representan los procesos principales del Sistema.
+                                    </p>
+                                    <p>
+                                        Los diagramas permiten visualizar las responsabilidades de cada actor, las funcionalidades que ofrece el sistema y las relaciones existentes entre los distintos casos de uso.
+                                    </p>
+                                    <h6 class="fw-bold">
+                                        Resultados alcanzados:
+                                    </h6>
+                                    <ul>
+                                        <li>Identificación de los actores principales del sistema.</li>
+                                        <li>Modelado de las funcionalidades más importantes del negocio.</li>
+                                        <li>Organización del sistema en seis módulos funcionales.</li>
+                                        <li>Representación de relaciones de asociación, «include» y «extend».</li>
+                                        <li>Obtención de una base sólida para el desarrollo de casos de uso expandidos, diagramas de secuencia y diseño de la base de datos.</li>
+                                    </ul>
+                                    <p class="mb-0">
+                                        Los diagramas desarrollados constituyen la base del análisis
+                                        funcional del sistema y servirán como referencia para las
+                                        siguientes etapas del proyecto.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>          
+                    </div>
+                    <h4 class="fw-bold text-warning mt-5 mb-3 scroll-margin" id="diagramas-desarrollados">
+                        Diagramas Desarrollados
+                    </h4>
+                    <p>
+                        Como resultado del proceso de modelado se obtuvieron seis Diagramas de Casos
+                        de Uso que representan los principales procesos del Sistema de Gestión de
+                        Almacenes y Control de Inventarios para la Constructora Ríos Herrera.
+                    </p>
+
+                    <div class="accordion" id="diagramasAccordion">
+
+                        <!-- MODULO 1 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#modulo1">
+
+                                    Módulo 1: Gestión de Abastecimiento y Compras
+                                </button>
+                            </h2>
+
+                            <div id="modulo1"
+                                class="accordion-collapse collapse show"
+                                data-bs-parent="#diagramasAccordion">
+
+                                <div class="accordion-body">
+
+                                    <p>
+                                        Este módulo representa los procesos relacionados con la
+                                        planificación, adquisición y recepción de materiales
+                                        necesarios para el desarrollo de las obras.
+                                    </p>
+
+                                    <h6 class="fw-bold">Actores involucrados</h6>
+
+                                    <ul>
+                                        <li>Gerente</li>
+                                        <li>Proveedor</li>
+                                        <li>Encargado de Almacén</li>
+                                    </ul>
+
+                                    <img src="/inventario/public/img/casosDeUso/modulo1.png"
+                                        class="img-fluid rounded shadow mt-3"
+                                        alt="Módulo 1">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- MODULO 2 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#modulo2">
+
+                                    Módulo 2: Solicitud de Materiales y Despacho a Obra
+                                </button>
+                            </h2>
+
+                            <div id="modulo2"
+                                class="accordion-collapse collapse"
+                                data-bs-parent="#diagramasAccordion">
+
+                                <div class="accordion-body">
+
+                                    <p>
+                                        Modela las solicitudes de materiales realizadas por las
+                                        diferentes obras y el proceso de despacho desde almacén,
+                                        garantizando el control de los recursos enviados.
+                                    </p>
+
+                                    <h6 class="fw-bold">Actores involucrados</h6>
+
+                                    <ul>
+                                        <li>Ingeniero</li>
+                                        <li>Administrador de Obra</li>
+                                        <li>Encargado de Almacén</li>
+                                    </ul>
+
+                                    <img src="/inventario/public/img/casosDeUso/modulo2.png"
+                                        class="img-fluid rounded shadow mt-3"
+                                        alt="Módulo 2">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- MODULO 3 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#modulo3">
+
+                                    Módulo 3: Control de Inventario y Movimientos de Almacén
+                                </button>
+                            </h2>
+
+                            <div id="modulo3"
+                                class="accordion-collapse collapse"
+                                data-bs-parent="#diagramasAccordion">
+
+                                <div class="accordion-body">
+
+                                    <p>
+                                        Permite gestionar el inventario de materiales, controlar las
+                                        entradas y salidas de productos y mantener actualizada la
+                                        disponibilidad de stock en tiempo real.
+                                    </p>
+
+                                    <h6 class="fw-bold">Actores involucrados</h6>
+
+                                    <ul>
+                                        <li>Encargado de Almacén</li>
+                                        <li>Ingeniero</li>
+                                        <li>Administrador</li>
+                                    </ul>
+
+                                    <img src="/inventario/public/img/casosDeUso/modulo3.png"
+                                        class="img-fluid rounded shadow mt-3"
+                                        alt="Módulo 3">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- MODULO 4 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#modulo4">
+                                    Módulo 4: Gestión de Obras y Seguimiento de Recursos
+                                </button>
+                            </h2>
+                            <div id="modulo4"
+                                class="accordion-collapse collapse"
+                                data-bs-parent="#diagramasAccordion">
+                                <div class="accordion-body">
+                                    <p>
+                                        Representa el control de las obras en ejecución, el
+                                        seguimiento de recursos asignados y el registro de gastos y
+                                        avances de cada proyecto.
+                                    </p>
+                                    <h6 class="fw-bold">Actores involucrados</h6>
+                                    <ul>
+                                        <li>Gerente</li>
+                                        <li>Administrador de Obra</li>
+                                    </ul>
+                                    <img src="/inventario/public/img/casosDeUso/modulo4.png"
+                                        class="img-fluid rounded shadow mt-3"
+                                        alt="Módulo 4">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- MODULO 5 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#modulo5">
+                                    Módulo 5: Gestión de Personal y Control de Asistencia
+                                </button>
+                            </h2>
+                            <div id="modulo5"
+                                class="accordion-collapse collapse"
+                                data-bs-parent="#diagramasAccordion">
+                                <div class="accordion-body">
+                                    <p>
+                                        Este módulo permite administrar la información del personal,
+                                        registrar asistencia, controlar asignaciones y generar
+                                        reportes relacionados con la productividad de los
+                                        trabajadores.
+                                    </p>
+                                    <h6 class="fw-bold">Actores involucrados</h6>
+                                    <ul>
+                                        <li>Recursos Humanos</li>
+                                        <li>Encargado de Obra</li>
+                                        <li>Gerente</li>
+                                    </ul>
+                                    <img src="/inventario/public/img/casosDeUso/modulo5.png"
+                                        class="img-fluid rounded shadow mt-3"
+                                        alt="Módulo 5">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- MODULO 6 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#modulo6">
+                                    Módulo 6: Gestión de Maquinaria, Mantenimiento y Seguridad
+                                </button>
+                            </h2>
+                            <div id="modulo6"
+                                class="accordion-collapse collapse"
+                                data-bs-parent="#diagramasAccordion">
+                                <div class="accordion-body">
+                                    <p>
+                                        Gestiona la asignación, mantenimiento y seguimiento del
+                                        estado de la maquinaria utilizada en las obras, además de
+                                        aspectos relacionados con la seguridad y auditoría del
+                                        sistema.
+                                    </p>
+                                    <h6 class="fw-bold">Actores involucrados</h6>
+                                    <ul>
+                                        <li>Administrador de Obra</li>
+                                        <li>Encargado de Obra</li>
+                                        <li>Administrador</li>
+                                    </ul>
+                                    <img src="/inventario/public/img/casosDeUso/modulo6.png"
+                                        class="img-fluid rounded shadow mt-3"
+                                        alt="Módulo 6">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 <!-- Caso de Uso de Negocio -->
@@ -140,7 +751,7 @@
                     
                     <div class="card border-left border-warning border-4 mb-4">
                         <div class="card-body">
-                             <h6 class="fw-bold">Definición</h6>
+                            <h6 class="fw-bold">Definición</h6>
                             <p class="mb-0">Un Caso de Uso de Negocio describe procesos de negocio de mayor nivel que pueden involucrar múltiples casos de uso del sistema.</p>
                         </div>
                     </div>
