@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+
+
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
         <div class="container">
@@ -70,6 +73,10 @@
         </div>
     </nav>
 
+
+
+
+
     <!-- BREADCRUMB -->
     <div class="bg-light py-3">
         <div class="container">
@@ -81,6 +88,12 @@
             </nav>
         </div>
     </div>
+
+
+
+
+
+
 
     <!-- CONTENIDO -->
     <div class="container py-5">
@@ -94,96 +107,413 @@
                             <li class="mb-2"><a href="#declaracion" class="text-decoration-none text-dark small">1. Declaración de Propósitos</a></li>
                             <li class="mb-2"><a href="#diagrama" class="text-decoration-none text-dark small">2. Diagrama de Contexto</a></li>
                             <li class="mb-2"><a href="#eventos" class="text-decoration-none text-dark small">3. Lista de Eventos</a></li>
+                            <li class="mb-2"><a href="#modelo-ambiental" class="text-decoration-none text-dark small">4. Modelo Ambiental</a></li>
+                            <li class="mb-2 ms-3"><a href="#nivel0" class="text-decoration-none text-dark small">4.1 Nivel 0</a></li>
+                            <li class="mb-2 ms-3"><a href="#nivel1" class="text-decoration-none text-dark small">4.2 Nivel 1</a></li>
+                            <li class="mb-2 ms-3"><a href="#nivel2" class="text-decoration-none text-dark small">4.3 Nivel 2</a></li>
+                            <li class="mb-2 ms-3"><a href="#nivel2-proceso" class="text-decoration-none text-dark small">4.4 Nivel 2 – Proceso 2.0</a></li>
+                            <li class="mb-2"><a href="#planificacion" class="text-decoration-none text-dark small">5. Planificación de Actividades</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- CONTENIDO PRINCIPAL -->
+           
             <div class="col-lg-9">
-                <!-- Declaración de Propósitos -->
                 <section id="declaracion" class="mb-5 scroll-margin">
                     <h2 class="fw-bold text-primary mb-3">Declaración de Propósitos</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-                    <div class="card border-left border-primary border-4">
-                        <div class="card-body">
-                            <h6 class="fw-bold">Propósito Principal</h6>
-                            <p class="mb-0">Desarrollar un sistema integrado que permita gestionar inventarios de manera eficiente, optimizando recursos y reduciendo pérdidas.</p>
-                        </div>
+                        <p>Realizar un sistema de gestión de almacén e inventarios para la constructora Ríos Herrera bajo el modelo ambiental, que registre los movimientos de materiales, controle el stock disponible, gestione las solicitudes y despachos a obra, y permita llevar el seguimiento de compras, personal y maquinaria dentro de la empresa.</p>                    <div class="card border-start border-primary border-4 shadow-sm">
+                        
+                            <div class="card-body">
+                                <h6 class="fw-bold">Propósito Principal</h6>
+                                <p class="mb-0">Desarrollar un sistema integrado para gestionar el almacén e inventarios de la constructora Ríos Herrera, optimizando el flujo de materiales desde la compra hasta el despacho a obra.</p>
+                            </div>
                     </div>
                     <div class="mt-3">
                         <h6 class="fw-bold">Propósitos Específicos</h6>
                         <ul>
-                            <li>Automatizar el registro de entradas y salidas</li>
-                            <li>Generar reportes en tiempo real</li>
-                            <li>Reducir errores humanos</li>
-                            <li>Mejorar la trazabilidad de productos</li>
+                            <li>Automatizar el registro de entradas y salidas de materiales en almacén mediante un kardex digital.</li>
+                            <li>Gestionar solicitudes de materiales desde obras y controlar su despacho y asignación.</li>
+                            <li>Controlar el inventario físico mediante conteos periódicos y conciliación con el sistema.</li>
+                            <li>Administrar órdenes de compra a proveedores y registrar compras de emergencia.</li>
+                            <li>Generar alertas automáticas ante stock mínimo de materiales críticos.</li>
+                            <li>Supervisar el avance de obras, gastos y asignación de maquinaria y personal.</li>
+                            <li>Generar reportes de valorización e inventario para la toma de decisiones gerenciales.</li>
+                            <li>Gestionar usuarios, roles y permisos del sistema según el perfil de cada actor.</li>
                         </ul>
                     </div>
                 </section>
 
-                <!-- Diagrama de Contexto -->
+                
                 <section id="diagrama" class="mb-5 scroll-margin">
                     <h2 class="fw-bold text-primary mb-3">Diagrama de Contexto</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <img src="https://via.placeholder.com/700x400/ff8c00/ffffff?text=Diagrama+de+Contexto" alt="Diagrama de Contexto" class="img-fluid rounded shadow-sm mb-4">
-                    <p>El diagrama anterior muestra las interacciones principales del sistema con los actores externos:</p>
+                    <p>El Diagrama de Contexto representa el <strong>Modelo Ambiental Nivel 0</strong> del sistema. Muestra el sistema como una caja negra central — el <em>Sistema de Gestión de Almacén e Inventarios Ríos Herrera</em> — rodeado de todos los actores externos (entidades terminadoras) que interactúan con él mediante flujos de datos de entrada y salida.</p>
+                    <img src="public/img/modeloAmbiental/Modelo Ambiental.drawio.png" alt="Diagrama de Contexto - Modelo Ambiental Nivel 0" class="img-fluid rounded shadow-sm mb-4 border">
+                    <p>Los actores externos identificados y sus interacciones principales son:</p>
                     <ul>
-                        <li><strong>Cliente:</strong> Realiza órdenes de compra</li>
-                        <li><strong>Proveedor:</strong> Suministra productos</li>
-                        <li><strong>Sistema:</strong> Gestiona inventarios</li>
-                        <li><strong>Gerente:</strong> Supervisa operaciones</li>
+                        <li><strong>Proveedor:</strong> Envía datos de comprobante/factura y recibe órdenes de compra.</li>
+                        <li><strong>Recursos Humanos:</strong> Proporciona datos de empleados, contratistas y asistencia diaria.</li>
+                        <li><strong>Ingeniero:</strong> Realiza solicitudes de material, consulta disponibilidad de stock y recibe el estado de su solicitud/pedido e informes de disponibilidad.</li>
+                        <li><strong>Encargado del Almacén:</strong> Gestiona movimientos de inventario, kardex, conteo físico y entrega de cantidades.</li>
+                        <li><strong>Administrador de Obra:</strong> Registra datos de obra, avances, gastos y asigna maquinaria.</li>
+                        <li><strong>Encargado de Obra en Campo:</strong> Reporta el estado de la maquinaria en campo.</li>
+                        <li><strong>Gerente:</strong> Recibe historial de acciones/auditoría, alertas de material crítico, y realiza validación de presupuesto y autorización de solicitudes/órdenes.</li>
+                        <li><strong>Administrador del Sistema:</strong> Configura permisos, gestiona usuarios y roles del sistema.</li>
                     </ul>
                 </section>
 
-                <!-- Lista de Eventos -->
                 <section id="eventos" class="mb-5 scroll-margin">
                     <h2 class="fw-bold text-primary mb-3">Lista de Eventos</h2>
-                    <p>Los eventos principales que disparan procesos en el sistema son:</p>
-                    
+                    <p>Los eventos son estímulos externos que provocan una reacción del sistema. A continuación se listan los principales eventos identificados, el actor que los origina y la respuesta esperada del sistema:</p>
                     <div class="table-responsive">
-                        <table class="table table-hover">
+                        <table class="table table-hover table-bordered align-middle">
                             <thead class="table-primary">
                                 <tr>
+                                    <th>#</th>
                                     <th>Evento</th>
-                                    <th>Actor</th>
-                                    <th>Descripción</th>
+                                    <th>Actor Origen</th>
+                                    <th>Respuesta del Sistema</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><strong>Solicitud de Productos</strong></td>
-                                    <td>Cliente</td>
-                                    <td>Cliente solicita productos disponibles</td>
+                                    <td>1</td>
+                                    <td><strong>Solicitud de material desde obra</strong></td>
+                                    <td>Ingeniero</td>
+                                    <td>Registra pedido y verifica disponibilidad de stock</td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Recepción de Mercancía</strong></td>
+                                    <td>2</td>
+                                    <td><strong>Consulta de disponibilidad de stock</strong></td>
+                                    <td>Ingeniero / Encargado Almacén</td>
+                                    <td>Devuelve informe de disponibilidad actual del material</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td><strong>Recepción de comprobante/factura de proveedor</strong></td>
                                     <td>Proveedor</td>
-                                    <td>Llegada de productos al almacén</td>
+                                    <td>Registra la entrada de materiales y actualiza inventario/kardex</td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Generación de Reportes</strong></td>
+                                    <td>4</td>
+                                    <td><strong>Autorización de despacho de materiales</strong></td>
+                                    <td>Administrador de Obra</td>
+                                    <td>Habilita la salida del material y genera comprobante de entrega</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td><strong>Inicio de conteo físico mensual</strong></td>
+                                    <td>Encargado Almacén</td>
+                                    <td>Registra cantidades contadas y detecta diferencias con el sistema</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td><strong>Stock por debajo del mínimo</strong></td>
+                                    <td>Sistema (automático)</td>
+                                    <td>Genera alerta de material crítico y notifica al Gerente / Encargado</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td><strong>Solicitud de reporte de inventario</strong></td>
+                                    <td>Administrador / Gerente</td>
+                                    <td>Genera reporte de valorización e inventario por almacén</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td><strong>Registro de datos de asistencia del personal</strong></td>
+                                    <td>Recursos Humanos</td>
+                                    <td>Actualiza registros de empleados y asistencia en el sistema</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td><strong>Registro de avance/gasto de obra</strong></td>
+                                    <td>Administrador de Obra</td>
+                                    <td>Actualiza el estado y presupuesto ejecutado de la obra</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td><strong>Reporte de estado de maquinaria</strong></td>
+                                    <td>Encargado de Obra en Campo</td>
+                                    <td>Actualiza el estado operativo de la maquinaria en el sistema</td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td><strong>Validación/autorización de presupuesto u orden</strong></td>
                                     <td>Gerente</td>
-                                    <td>Solicitud de reportes de inventario</td>
+                                    <td>Aprueba o rechaza la orden de compra o solicitud de material</td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Actualización de Stock</strong></td>
-                                    <td>Sistema</td>
-                                    <td>Ajuste automático de cantidades</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Alertas de Bajo Stock</strong></td>
-                                    <td>Sistema</td>
-                                    <td>Notificación de productos agotados</td>
+                                    <td>12</td>
+                                    <td><strong>Configuración de permisos y roles</strong></td>
+                                    <td>Administrador del Sistema</td>
+                                    <td>Actualiza los permisos de acceso de usuarios en el sistema</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </section>
+
+                
+                <section id="modelo-ambiental" class="mb-5 scroll-margin">
+                    <h2 class="fw-bold text-primary mb-3">Modelo Ambiental</h2>
+                    <p>El Modelo Ambiental describe el entorno en el que opera el sistema mediante diagramas de flujo de datos (DFD) en distintos niveles de abstracción. Cada nivel descompone los procesos del nivel anterior, detallando progresivamente las funciones, actores y almacenes de datos involucrados.</p>
+                </section>
+
+                
+                <section id="nivel0" class="mb-5 scroll-margin">
+                    <h3 class="fw-bold mb-3" style="color:#0d6efd;">Nivel 0 – Diagrama de Contexto</h3>
+                    <p>El <strong>Nivel 0</strong> (también llamado Diagrama de Contexto) representa el sistema como una única burbuja central: el <em>Sistema de Gestión de Almacén e Inventarios Ríos Herrera</em>. En este nivel solo se identifican las entidades externas y los flujos de información de alto nivel que entran y salen del sistema, sin descomponer ningún proceso interno.</p>
+                    <div class="card shadow-sm border-0 mb-3">
+                        <div class="card-body text-center p-2">
+                            <img src="public/img/modeloAmbiental/Modelo Ambiental.drawio.png" alt="Modelo Ambiental - Nivel 0" class="img-fluid rounded border">
+                        </div>
+                    </div>
+                    <p><strong>Actores externos identificados:</strong> Proveedor, Recursos Humanos, Ingeniero, Encargado del Almacén, Administrador de Obra, Encargado de Obra en Campo, Gerente y Administrador del Sistema. Cada uno intercambia flujos específicos de datos con el sistema, ya sea enviando información (solicitudes, datos de personal, facturas) o recibiéndola (órdenes de compra, alertas, reportes, estados).</p>
+                </section>
+
+                
+                <section id="nivel1" class="mb-5 scroll-margin">
+                    <h3 class="fw-bold mb-3" style="color:#0d6efd;">Nivel 1 – Procesos Principales</h3>
+                    <p>El <strong>Nivel 1</strong> descompone el sistema central en sus <strong>seis macroprocesos</strong> principales, mostrando cómo interactúan entre sí, con los actores externos y con los almacenes de datos compartidos. Este nivel da visibilidad al flujo de información entre áreas funcionales del sistema.</p>
+                    <div class="card shadow-sm border-0 mb-3">
+                        <div class="card-body text-center p-2">
+                            <img src="public/img/modeloAmbiental/MA Nivel 1.drawio.png" alt="Modelo Ambiental - Nivel 1" class="img-fluid rounded border">
+                        </div>
+                    </div>
+                    <p>Los seis procesos identificados en el Nivel 1 son:</p>
+                    <div class="table-responsive">
+                        <table class="table table-sm table-bordered align-middle">
+                            <thead class="table-primary">
+                                <tr><th>Proceso</th><th>Nombre</th><th>Actores / Almacenes relacionados</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>1.0</strong></td><td>Gestión de Abastecimiento y Compras</td><td>Proveedor, Gerente — PROVEEDOR, ORDEN_COMPRA</td></tr>
+                                <tr><td><strong>2.0</strong></td><td>Solicitud de Materiales y Despacho a Obra</td><td>Ingeniero, Encargado Almacén — KARDEX, MATERIAL, PEDIDO, DETALLE_PEDIDO</td></tr>
+                                <tr><td><strong>3.0</strong></td><td>Control de Inventarios y Movimientos</td><td>Encargado Almacén — KARDEX, MATERIAL, INVENTARIO, ALMACEN</td></tr>
+                                <tr><td><strong>4.0</strong></td><td>Gestión de Obras y Seguimiento de Recursos</td><td>Gerente, Encargado Campo, Administrador Obra — OBRA, GASTO_OBRA, COMPROBANTE</td></tr>
+                                <tr><td><strong>5.0</strong></td><td>Gestión de Personal y Asistencia</td><td>Recursos Humanos — EMPLEADO, ASISTENCIA</td></tr>
+                                <tr><td><strong>6.0</strong></td><td>Gestión de Maquinaria, Mantenimiento y Seguridad</td><td>Administrador Sistema, Encargado Campo — MAQUINARIA, USUARIO, ROL_PERMISO, HISTORIAL</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                
+                <section id="nivel2" class="mb-5 scroll-margin">
+                    <h3 class="fw-bold mb-3" style="color:#0d6efd;">Nivel 2 – Control de Inventarios y Movimientos</h3>
+                    <p>El <strong>Nivel 2</strong> descompone el proceso <strong>3.0 – Control de Inventarios y Movimientos</strong> en sus subprocesos internos. Este nivel muestra en detalle cómo se consulta disponibilidad, se realizan conteos físicos, se actualiza el stock, se concilian diferencias, se actualizan precios y se generan alertas y reportes.</p>
+                    <div class="card shadow-sm border-0 mb-3">
+                        <div class="card-body text-center p-2">
+                            <img src="public/img/modeloAmbiental/MA Nivel2 .drawio.png" alt="Modelo Ambiental - Nivel 2: Control de Inventarios" class="img-fluid rounded border">
+                        </div>
+                    </div>
+                    <p>Los subprocesos identificados son:</p>
+                    <ul>
+                        <li><strong>3.1 Consultar Disponibilidad:</strong> El Ingeniero solicita consulta de stock; el proceso lee el almacén KARDEX y devuelve existencias actuales. También permite generar informes de disponibilidad hacia el Ingeniero y el proceso 3.7.</li>
+                        <li><strong>3.2 Realizar Conteo Físico:</strong> Iniciado por el Encargado de Almacén mensualmente. Registra las cantidades físicas contadas y las envía al proceso 3.3 para su comparación.</li>
+                        <li><strong>3.3 Actualizar Stock en Sistema:</strong> Recibe las cantidades contadas, actualiza el INVENTARIO y ajusta el KARDEX con la cantidad ajustada. Si detecta diferencias, las envía al proceso 3.4.</li>
+                        <li><strong>3.4 Conciliar con Sistema:</strong> Registra las diferencias con su motivo (justificación). Las diferencias críticas son enviadas al Administrador para su aprobación. Una vez aprobada la conciliación, el proceso continúa.</li>
+                        <li><strong>3.5 Actualizar Precio Unitario:</strong> Lee el último precio de compra desde el KARDEX y actualiza el precio unitario del material. Informa si existe material sin precio reciente.</li>
+                        <li><strong>3.6 Generar Alerta Stock Mínimo:</strong> Lee los umbrales de stock mínimo y el stock actual desde MATERIAL_INVENTARIO. Genera alertas de material bajo stock mínimo y alerta de material crítico hacia el Gerente.</li>
+                        <li><strong>3.7 Generar Reporte de Inventario:</strong> El Administrador solicita el reporte. Lee datos del KARDEX MATERIAL e INVENTARIO. Genera el reporte de valorización e inventario con el stock total por almacén.</li>
+                    </ul>
+                </section>
+
+                
+                <section id="nivel2-proceso" class="mb-5 scroll-margin">
+                    <h3 class="fw-bold mb-3" style="color:#0d6efd;">Nivel 2 – Proceso 2.0: Solicitud de Materiales y Despacho a Obra</h3>
+                    <p>Este diagrama descompone el proceso <strong>2.0 – Solicitud de Materiales y Despacho a Obra</strong>. Describe el flujo completo desde que el Ingeniero solicita materiales para una obra hasta que los materiales son entregados, asignados en el KARDEX y el pedido queda cerrado.</p>
+                    <div class="card shadow-sm border-0 mb-3">
+                        <div class="card-body text-center p-2">
+                            <img src="public/img/modeloAmbiental/MA Nivel 2 - proceso 2.0.drawio.png" alt="Modelo Ambiental - Nivel 2: Proceso 2.0 Solicitud y Despacho" class="img-fluid rounded border">
+                        </div>
+                    </div>
+                    <p>Los subprocesos identificados son:</p>
+                    <ul>
+                        <li><strong>2.1 Solicitar Material desde Obra:</strong> El Ingeniero ingresa datos de solicitud (material, cantidad, obra). El proceso registra la solicitud con estado pendiente y graba un nuevo pedido en la tabla PEDIDO.</li>
+                        <li><strong>2.2 Verificar Disponibilidad de Stock:</strong> Consulta el catálogo de MATERIAL y el stock actual. Si hay disponibilidad confirmada, avanza al proceso 2.3. Si el stock es insuficiente, notifica al Gerente como compra urgente y deriva al proceso 2.6.</li>
+                        <li><strong>2.3 Autorizar Despacho:</strong> El Administrador de Obra envía la autorización de despacho. El proceso actualiza el pedido al estado "autorizado" en PEDIDO, habilitando el despacho con el responsable de retiro.</li>
+                        <li><strong>2.4 Registrar Salida de Almacén:</strong> El Encargado de Almacén confirma la cantidad entregada. El proceso actualiza el pedido a estado "cerrado", genera el comprobante de entrega y notifica al Ingeniero sobre el estado de su solicitud.</li>
+                        <li><strong>2.5 Asignar Material a Obra:</strong> Vincula el material entregado a la obra en el KARDEX_INVENTARIO, descuenta el stock del INVENTARIO y actualiza la cantidad entregada en DETALLE_PEDIDO.</li>
+                        <li><strong>2.6 Registrar Compra de Emergencia:</strong> Activado cuando no hay stock suficiente. Registra la compra urgente, actualiza el pedido a estado "bloqueado" y graba el detalle en DETALLE_PEDIDO, comunicando al Gerente la situación.</li>
+                    </ul>
+                </section>
+
+                
+                <section id="planificacion" class="mb-5 scroll-margin">
+                    <h2 class="fw-bold text-primary mb-3">Planificación de Actividades</h2>
+                    <p>La planificación de actividades establece la distribución cronológica de las tareas previstas para el desarrollo del presente proyecto informático, comprendiendo el período de abril al 8 de junio de 2026. Las actividades se organizan de forma secuencial siguiendo las fases: análisis y relevamiento de requerimientos, modelado del sistema mediante diagramas UML y Modelo Ambiental, diseño de la base de datos a través del Modelo Entidad-Relación, y la construcción e integración del blog informático como producto de presentación del proyecto. Como hito principal se establece la firma y aceptación formal de requerimientos, documento que formaliza el acuerdo entre el equipo de desarrollo y el cliente respecto al alcance y funcionalidades del sistema a desarrollar.</p>
+
+                    <div class="table-responsive mt-4">
+                        <table class="table table-bordered text-center align-middle" style="font-size: 0.8rem; min-width: 900px;">
+                            <thead>
+                                <tr class="table-dark">
+                                    <th rowspan="2" class="text-start" style="min-width:40px;">N°</th>
+                                    <th rowspan="2" class="text-start" style="min-width:180px;">Actividad</th>
+                                    
+                                    <th colspan="2" class="table-secondary">Abril</th>
+                                    
+                                    <th colspan="10" class="table-secondary">Mayo</th>
+                                    
+                                    <th colspan="5" class="table-secondary">Junio</th>
+                                </tr>
+                                <tr class="table-secondary" style="font-size:0.75rem;">
+                                    <th>29</th><th>30</th>
+                                    <th>2-4</th><th>5-6</th><th>7-8</th><th>9-12</th><th>13-15</th><th>16-18</th>
+                                    <th>19-21</th><th>22-25</th><th>26-28</th><th>29-31</th><th>1-3</th><th>4-7</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td>1</td>
+                                    <td class="text-start">Relevamiento y encuesta al gerente</td>
+                                    <td style="background:#c9a0a0;"></td>
+                                    <td style="background:#c9a0a0;"></td>
+                                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2</td>
+                                    <td class="text-start">Análisis documental (plantillas, OC)</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td style="background:#c9a0a0;"></td>
+                                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>3</td>
+                                    <td class="text-start">Árbol de problemas y objetivos</td>
+                                    <td></td><td></td>
+                                    <td></td>
+                                    <td style="background:#c9a0a0;"></td>
+                                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>4</td>
+                                    <td class="text-start">Firma y aceptación de requerimientos</td>
+                                    <td></td><td></td><td></td>
+                                    <td></td>
+                                    <td style="background:#c9a0a0;"></td>
+                                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>5</td>
+                                    <td class="text-start">Diagrama de clases UML</td>
+                                    <td></td><td></td><td></td><td></td>
+                                    <td></td>
+                                    <td style="background:#4caf50;"></td>
+                                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>6</td>
+                                    <td class="text-start">Modelo Entidad-Relación (MER)</td>
+                                    <td></td><td></td><td></td><td></td><td></td>
+                                    <td></td>
+                                    <td style="background:#4caf50;"></td>
+                                    <td></td><td></td><td></td><td></td><td></td><td></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>7</td>
+                                    <td class="text-start">Modelo Ambiental nivel 0, 1, 2</td>
+                                    <td></td><td></td><td></td><td></td><td></td><td></td>
+                                    <td></td>
+                                    <td style="background:#4caf50;"></td>
+                                    <td></td><td></td><td></td><td></td><td></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>8</td>
+                                    <td class="text-start">Diagrama de procesos</td>
+                                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                                    <td style="background:#ff9800;"></td>
+                                    <td></td>
+                                    <td></td><td></td><td></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>9</td>
+                                    <td class="text-start">Diagramas CUS y MACUN</td>
+                                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                                    <td style="background:#ff9800;"></td>
+                                    <td></td>
+                                    <td></td><td></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>10</td>
+                                    <td class="text-start">Casos de uso expandidos</td>
+                                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                                    <td style="background:#ff9800;"></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>11</td>
+                                    <td class="text-start">Estructura del blog (HTML/CSS/JS)</td>
+                                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                                    <td style="background:#827717;"></td>
+                                    <td></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>12</td>
+                                    <td class="text-start">Integración de diagramas al blog</td>
+                                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                                    <td></td>
+                                    <td style="background:#827717;"></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>13</td>
+                                    <td class="text-start">Videos tutoriales (6 integrantes)</td>
+                                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                                    <td style="background:#827717;"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    
+                    <div class="d-flex flex-wrap gap-3 mt-3">
+                        <div class="d-flex align-items-center gap-2">
+                            <div style="width:20px;height:20px;background:#c9a0a0;border:1px solid #ccc;border-radius:3px;"></div>
+                            <small>Relevamiento y análisis</small>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <div style="width:20px;height:20px;background:#4caf50;border:1px solid #ccc;border-radius:3px;"></div>
+                            <small>Modelado UML / MER / Ambiental</small>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <div style="width:20px;height:20px;background:#ff9800;border:1px solid #ccc;border-radius:3px;"></div>
+                            <small>Diagramas de procesos y casos de uso</small>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <div style="width:20px;height:20px;background:#827717;border:1px solid #ccc;border-radius:3px;"></div>
+                            <small>Construcción e integración del blog</small>
+                        </div>
+                    </div>
+                </section>
+
             </div>
         </div>
     </div>
 
+
+
+
+
+
+
+
+    
     <!-- FOOTER -->
     <footer class="bg-dark text-white py-4 mt-5">
         <div class="container">
