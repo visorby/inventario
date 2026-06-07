@@ -106,7 +106,7 @@
                 <!-- Definición -->
                 <section id="definicion" class="mb-5 scroll-margin">
                     <h2 class="fw-bold text-primary mb-3">Definición del Modelo ER</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Para garantizar un flujo de información óptimo dentro de la Constructora Ríos Herrera, se diseñó este Modelo Entidad-Relación como el pilar lógico del sistema. Su objetivo primordial es estructurar el almacenamiento de datos relacionales, permitiendo un seguimiento riguroso que abarca desde la asignación de materiales en almacenes específicos hasta el control de asistencia y presupuestos directamente vinculados a cada obra activa..</p>
                     <div class="card border-left border-primary border-4">
                         <div class="card-body">
                             <h6 class="fw-bold">¿Qué es un Modelo ER?</h6>
@@ -116,28 +116,45 @@
                 </section>
 
                 <!-- Entidades -->
-                <section id="entidades" class="mb-5 scroll-margin">
+                <!--<section id="entidades" class="mb-5 scroll-margin">
                     <h2 class="fw-bold text-primary mb-3">Entidades</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Las entidades principales del sistema incluyen:</p>
+                    <p>El núcleo del sistema de información está constituido por un conjunto de entidades interconectadas, clasificadas estratégicamente para cubrir la gestión de inventario de la organización:</p>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><strong>Producto:</strong> Representa los artículos del inventario</li>
-                        <li class="list-group-item"><strong>Almacén:</strong> Ubicaciones de almacenamiento</li>
-                        <li class="list-group-item"><strong>Proveedor:</strong> Fuentes de suministro</li>
-                        <li class="list-group-item"><strong>Transacción:</strong> Movimientos de inventario</li>
+                        <li class="list-group-item"><strong>Persona:</strong> Representa los artículos del inventario</li>
+                        <li class="list-group-item"><strong>Usuario:</strong> Ubicaciones de almacenamiento</li>
+                        <li class="list-group-item"><strong>Historial:</strong> Fuentes de suministro</li>
+                        <li class="list-group-item"><strong>Rol Permiso:</strong> Movimientos de inventario</li>
+                        <li class="list-group-item"><strong>Pedido:</strong> Movimientos de inventario</li>
+                        <li class="list-group-item"><strong>Detalle Pedido:</strong> Movimientos de inventario</li>
+                        <li class="list-group-item"><strong>Material:</strong> Movimientos de inventario</li>
+                        <li class="list-group-item"><strong>Inventario:</strong> Movimientos de inventario</li>
+                        <li class="list-group-item"><strong>Almacen:</strong> Movimientos de inventario</li>
+                        <li class="list-group-item"><strong>Kardex:</strong> Movimientos de inventario</li>
+                        <li class="list-group-item"><strong>Orden Compra:</strong> Movimientos de inventario</li>
+                        <li class="list-group-item"><strong>Proveedor:</strong> Movimientos de inventario</li>
+                        <li class="list-group-item"><strong>Empleado:</strong> Movimientos de inventario</li>
+                        <li class="list-group-item"><strong>Asistencia:</strong> Movimientos de inventario</li>
+                        <li class="list-group-item"><strong>Obra:</strong> Movimientos de inventario</li>
+                        <li class="list-group-item"><strong>Gasto Obra:</strong> Movimientos de inventario</li>
+                        <li class="list-group-item"><strong>Comprobante:</strong> Movimientos de inventario</li>
+                        <li class="list-group-item"><strong>Maquinaria:</strong> Movimientos de inventario</li>
+                        <li class="list-group-item"><strong>Mantenimiento:</strong> Movimientos de inventario</li>
                     </ul>
                 </section>
-
+            -->
                 <!-- Relaciones -->
                 <section id="relaciones" class="mb-5 scroll-margin">
                     <h2 class="fw-bold text-primary mb-3">Relaciones</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Las relaciones entre entidades permiten conectar los diferentes elementos del modelo.</p>
-                    <img src="https://via.placeholder.com/600x300/1f3a93/ffffff?text=Diagrama+ER" alt="Diagrama ER" class="img-fluid rounded my-3">
+                    
+                    <div class="w-100 overflow-x-auto border rounded bg-white shadow-sm" style="max-height: 550px; overflow-y: auto;">
+                        <img src="public/img/ER2.jpg" alt="Diagrama ER" class="d-block mx-auto" style="width: 100%; min-width: 1200px; height: auto; object-fit: contain; padding: 10px;">
+                    </div>
                 </section>
 
                 <!-- Atributos -->
                 <section id="atributos" class="mb-5 scroll-margin">
                     <h2 class="fw-bold text-primary mb-3">Atributos</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Los atributos definen las características específicas de cada entidad.</p>
+                    <p>Una lista de todas las entidades junto con sus atributos</p>
                     <div class="table-responsive">
                         <table class="table table-bordered">
                             <thead class="table-light">
@@ -148,16 +165,80 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><strong>Producto</strong></td>
-                                    <td>ID, Nombre, Descripción, Precio, Stock</td>
+                                    <td><strong>Persona</strong></td>
+                                    <td>ci, nombre, apellido,telefono, correo, direccion</td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Almacén</strong></td>
-                                    <td>ID, Nombre, Ubicación, Capacidad</td>
+                                    <td><strong>Usuario</strong></td>
+                                    <td>isusuario, rol, username, password, idrolpermiso</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Historial</strong></td>
+                                    <td>idhistorial, idusuario, accion, hora, fecha</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Rol Permiso</strong></td>
+                                    <td>idrol_permiso, rol, puede_autorizar, registra_salida</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Pedido</strong></td>
+                                    <td>idpedido, idsolicitante, idautorizador, fechasolicitud, estado, idobra</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Detalle_Pedido</strong></td>
+                                    <td>id_detalle_pedido, idmaterial, cantidad_solicitada, cantidad_entregada</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Material</strong></td>
+                                    <td>idmaerial, descripcion, nombre, precio, stock_minimo, tipo_medida</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Inventario</strong></td>
+                                    <td>idinventario, idalmacen, idmaterial, cantidad</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Almacen</strong></td>
+                                    <td>idalmacen, ubicacion, nombre</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Kardex</strong></td>
+                                    <td>idkardex, idusuario, nrodocumento, tipo, tipodoc, idinventario, cantidad, fecha, hora</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Orden Compra</strong></td>
+                                    <td>idorden, idproveedor, idsolicictud, feca, totalmonto, idautorizador</td>
                                 </tr>
                                 <tr>
                                     <td><strong>Proveedor</strong></td>
-                                    <td>ID, Nombre, Contacto, Teléfono</td>
+                                    <td>idpreveedor, razon_social, direccion_empresa, nit, contacto</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Empleado</strong></td>
+                                    <td>idempleado, especialidad, tipo_contrato, fecha_ingreso, salario</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Asistencia</strong></td>
+                                    <td>idasistencia, idempleado, idobra, encargado, fecha, horas_trabajadas</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Obra</strong></td>
+                                    <td>idobra, nombre, direccion, avance, estado, prioridad, iding_responsable, presupuesto_total, fecha_inicio, fecha_final, fase</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Gasto Obra</strong></td>
+                                    <td>idgasto, idobra, monto, fecha, categoria, idcomprobante</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Comprobante</strong></td>
+                                    <td>idcomprobante, nrofactura</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Maquinaria</strong></td>
+                                    <td>idmaquinaria, descripcion , tipo, disponibilidad, estado, idobra_asignada</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Mantenimiento</strong></td>
+                                    <td>idmantenimiento, fecha, descripcion</td>
                                 </tr>
                             </tbody>
                         </table>
