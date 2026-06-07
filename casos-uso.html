@@ -761,7 +761,7 @@
                             <h6 class="fw-bold mb-0 text-dark">Diagrama General del Modelo de Casos de Uso de Negocio (MCUN)</h6>
                         </div>
                         <div class="card-body text-center bg-white">
-                            <img src="ruta-de-tu-imagen.png" alt="Diagrama de Caso de Uso de Negocio Integral" class="img-fluid rounded border mb-2" style="max-height: 550px;">
+                            <img src="public/img/CUN.png" alt="Diagrama de Caso de Uso de Negocio Integral" class="img-fluid rounded border mb-2" style="max-height: 550px;">
                             <div class="form-text text-muted">Vista panorámica de la interacción entre Actores de Negocio (AN) y Objetivos de Negocio (ON).</div>
                         </div>
                     </div>
@@ -778,11 +778,11 @@
                             <div id="cun1" class="accordion-collapse collapse show" data-bs-parent="#cunAccordion">
                                 <div class="accordion-body">
                                     <p><strong>Explicación en el Diagrama:</strong> Este objetivo regula la inversión de capital en insumos para evitar compras desmedidas o desvíos de fondos en las sucursales:</p>
-                                    <ul>
-                                        <li>El proceso base <span class="text-info"><strong>CUN1: Abastecer Almacén</strong></span> requiere obligatoriamente (<code>&lt;&lt;include&gt;&gt;</code>) pasar por la aprobación formal del actor de negocio <span class="text-success"><strong>AN1: Administrativo</strong></span> en <span class="text-info"><strong>CUN2: Aprobar orden de compra</strong></span>.</li>
-                                        <li>Para asegurar la salud financiera de la constructora, se incluye de manera mandatoria (<code>&lt;&lt;include&gt;&gt;</code>) el proceso <span class="text-info"><strong>CUN4: Controlar Presupuesto</strong></span>.</li>
-                                        <li>Ante cualquier anomalía o reajuste de costos en los frentes de obra, el flujo se extiende (<code>&lt;&lt;extend&gt;&gt;</code>) condicionalmente hacia <span class="text-info"><strong>CUN3: Validar Presupuesto</strong></span>, subproceso que depende directamente de que el actor de negocio <span class="text-success"><strong>AN2: Gerente</strong></span> ejecute la acción de <span class="text-info"><strong>CUN5: Autorizar Presupuesto extra</strong></span>.</li>
-                                    </ul>
+                    <ul>
+                        <li>El proceso base <span class="text-info"><strong>CUN1: Abastecer Almacén</strong></span> requiere obligatoriamente (<code>&lt;&lt;include&gt;&gt;</code>) pasar por la aprobación formal del actor de negocio <span class="text-success"><strong>AN1: Administrativo</strong></span> en <span class="text-info"><strong>CUN2: Aprobar orden de compra</strong></span>, flujo que finalmente interactúa con el actor externo <span class="text-success"><strong>AN5: Proveedor</strong></span> para el despacho físico de los materiales.</li>
+                        <li>Para asegurar la salud financiera de la constructora, se incluye de manera mandatoria (<code>&lt;&lt;include&gt;&gt;</code>) el proceso <span class="text-info"><strong>CUN4: Controlar Presupuesto</strong></span>.</li>
+                        <li>Ante cualquier anomalía o reajuste de costos en los frentes de obra, el flujo se extiende (<code>&lt;&lt;extend&gt;&gt;</code>) condicionalmente hacia <span class="text-info"><strong>CUN3: Validar Presupuesto</strong></span>, subproceso que depende directamente de que el actor de negocio <span class="text-success"><strong>AN2: Gerente</strong></span> ejecute la acción de <span class="text-info"><strong>CUN5: Autorizar Presupuesto extra</strong></span>.</li>
+                    </ul>
                                 </div>
                             </div>
                         </div>
