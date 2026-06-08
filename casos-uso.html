@@ -11,9 +11,10 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">
-                <span class="text-primary">Ríos</span>
-                <span class="text-warning">Herrera</span>
+            <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+                <img src="public/img/logoEmpresaCons.jpeg" alt="Logo Ríos Herrera" style="max-height: 40px; max-width: 40px;">
+                <span style="color: #E63946">Ríos</span>
+                <span style="color: #2A4158">Herrera</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -38,9 +39,28 @@
                             Análisis Estructurado
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="analisisDropdown">
-                            <li><a class="dropdown-item" href="analisis-estructurado.html#declaracion">Declaración de Propósitos</a></li>
-                            <li><a class="dropdown-item" href="analisis-estructurado.html#diagrama">Diagrama de Contexto</a></li>
-                            <li><a class="dropdown-item" href="analisis-estructurado.html#eventos">Lista de Eventos</a></li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#" id="modeloAmbientalDropdown" role="button" data-bs-toggle="dropdown">
+                                    Modelo Ambiental
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="modeloAmbientalDropdown">
+                                    <li><a class="dropdown-item" href="analisis-estructurado.html#declaracion">Declaración de Propósitos</a></li>
+                                    <li><a class="dropdown-item" href="analisis-estructurado.html#diagrama">Diagrama de Contexto</a></li>
+                                    <li><a class="dropdown-item" href="analisis-estructurado.html#eventos">Lista de Eventos</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#" id="modeloComportamientoDropdown" role="button" data-bs-toggle="dropdown">
+                                    Modelo de Comportamiento
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="modeloComportamientoDropdown">
+                                    <li><a class="dropdown-item" href="analisis-estructurado.html#nivel0">Nivel Cero</a></li>
+                                    <li><a class="dropdown-item" href="analisis-estructurado.html#nivel1">Nivel 1</a></li>
+                                    <li><a class="dropdown-item" href="analisis-estructurado.html#nivel2">Nivel 2</a></li>
+                                    <li><a class="dropdown-item" href="analisis-estructurado.html#nivel2-proceso2">Nivel 2 - Proceso 2.0</a></li>
+                                    <li><a class="dropdown-item" href="analisis-estructurado.html#planificacion">Planificación de Actividades</a></li>
+                                </ul>
+                            </li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="modelo-er.html">Modelo ER</a></li>
                             <li><a class="dropdown-item" href="diagrama-procesos.html">Diagrama de Procesos</a></li>
@@ -90,7 +110,7 @@
             <div class="col-lg-3">
                 <div class="card shadow-sm border-0 sticky-top" style="top: 80px;">
                     <div class="card-body">
-                        <h6 class="card-title fw-bold text-primary mb-3">ÍNDICE</h6>
+                        <h6 class="card-title fw-bold fw-bold" style="color: #E63946 mb-3">ÍNDICE</h6>
                         <ul class="list-unstyled">
                             <li class="mb-2"><a href="#caso-uso" class="text-decoration-none text-dark small">1. Caso de Uso</a>
                             <ul class="list-unstyled ms-3 mt-1">
@@ -125,7 +145,7 @@
             <div class="col-lg-9">
                 <!-- Caso de Uso -->
                 <section id="caso-uso" class="mb-5 scroll-margin">
-                    <h2 class="fw-bold text-primary mb-3">
+                    <h2 class="fw-bold fw-bold" style="color: #E63946 mb-3">
                         Diagrama de Casos de Uso
                     </h2>
                     <p>
@@ -135,7 +155,7 @@
                         actores involucrados, las funcionalidades principales del sistema y las
                         relaciones existentes entre ellas.
                     </p>
-                    <div class="card border-left border-primary border-4 mb-4">
+                    <div class="card border-left border-1" style="border-color: #E63946 border-4 mb-4">
                         <div class="card-body">
                             <h6 class="fw-bold">Definición</h6>
                             <p class="mb-0">
@@ -145,7 +165,7 @@
                             </p>
                         </div>
                     </div>
-                    <h4 class="fw-bold text-warning mb-3">
+                    <h4 class="fw-bold fw-bold" style="color: #2A4158 mb-3">
                         Objetivo del Diagrama
                     </h4>
                     <p>
@@ -154,7 +174,7 @@
                         de cada actor y organizando las funcionalidades del sistema en módulos
                         funcionales para facilitar su comprensión y posterior desarrollo.
                     </p>
-                    <h4 class="fw-bold text-warning mt-4 mb-3 scroll-margin" id="componentes-diagrama">
+                    <h4 class="fw-bold fw-bold" style="color: #2A4158 mt-4 mb-3 scroll-margin" id="componentes-diagrama">
                         Componentes del Diagrama
                     </h4>
                     <p>
@@ -280,7 +300,7 @@
                         </div>
                     </div>
 
-                    <h4 class="fw-bold text-warning mt-5 mb-3 scroll-margin" id="proceso-modelado">
+                    <h4 class="fw-bold fw-bold" style="color: #2A4158 mt-5 mb-3 scroll-margin" id="proceso-modelado">
                         Proceso de Modelado del Sistema
                     </h4>
                     <p>
@@ -515,7 +535,7 @@
                             </div>
                         </div>          
                     </div>
-                    <h4 class="fw-bold text-warning mt-5 mb-3 scroll-margin" id="diagramas-desarrollados">
+                    <h4 class="fw-bold fw-bold" style="color: #2A4158 mt-5 mb-3 scroll-margin" id="diagramas-desarrollados">
                         Diagramas Desarrollados
                     </h4>
                     <p>
@@ -747,7 +767,7 @@
 
                 <!-- Caso de Uso de Negocio -->
                 <section id="caso-negocio" class="mb-5 scroll-margin">
-                    <h2 class="fw-bold text-primary mb-3">Caso de Uso de Negocio (CUN)</h2>
+                    <h2 class="fw-bold fw-bold" style="color: #E63946 mb-3">Caso de Uso de Negocio (CUN)</h2>
                     <p>Para la Constructora Ríos Herrera, se ha diseñado un único <strong>Modelo de Casos de Uso de Negocio (MCUN)</strong> que unifica las operaciones de las sucursales de Sucre y El Alto. Este modelo permite visualizar cómo cooperan los actores, los objetivos estratégicos de la empresa y las reglas de negocio en una sola arquitectura robusta.</p>
                     
                     <div class="card border-left border-warning border-4 mb-4">
@@ -780,9 +800,9 @@
                                 <div class="accordion-body">
                                     <p><strong>Explicación en el Diagrama:</strong> Este objetivo regula la inversión de capital en insumos para evitar compras desmedidas o desvíos de fondos en las sucursales:</p>
                     <ul>
-                        <li>El proceso base <span class="text-info"><strong>CUN1: Abastecer Almacén</strong></span> requiere obligatoriamente (<code>&lt;&lt;include&gt;&gt;</code>) pasar por la aprobación formal del actor de negocio <span class="text-success"><strong>AN1: Administrativo</strong></span> en <span class="text-info"><strong>CUN2: Aprobar orden de compra</strong></span>, flujo que finalmente interactúa con el actor externo <span class="text-success"><strong>AN5: Proveedor</strong></span> para el despacho físico de los materiales.</li>
-                        <li>Para asegurar la salud financiera de la constructora, se incluye de manera mandatoria (<code>&lt;&lt;include&gt;&gt;</code>) el proceso <span class="text-info"><strong>CUN4: Controlar Presupuesto</strong></span>.</li>
-                        <li>Ante cualquier anomalía o reajuste de costos en los frentes de obra, el flujo se extiende (<code>&lt;&lt;extend&gt;&gt;</code>) condicionalmente hacia <span class="text-info"><strong>CUN3: Validar Presupuesto</strong></span>, subproceso que depende directamente de que el actor de negocio <span class="text-success"><strong>AN2: Gerente</strong></span> ejecute la acción de <span class="text-info"><strong>CUN5: Autorizar Presupuesto extra</strong></span>.</li>
+                        <li>El proceso base <span style="color: #E63946"><strong>CUN1: Abastecer Almacén</strong></span> requiere obligatoriamente (<code>&lt;&lt;include&gt;&gt;</code>) pasar por la aprobación formal del actor de negocio <span style="color: #2A4158"><strong>AN1: Administrativo</strong></span> en <span style="color: #E63946"><strong>CUN2: Aprobar orden de compra</strong></span>, flujo que finalmente interactúa con el actor externo <span style="color: #2A4158"><strong>AN5: Proveedor</strong></span> para el despacho físico de los materiales.</li>
+                        <li>Para asegurar la salud financiera de la constructora, se incluye de manera mandatoria (<code>&lt;&lt;include&gt;&gt;</code>) el proceso <span style="color: #E63946"><strong>CUN4: Controlar Presupuesto</strong></span>.</li>
+                        <li>Ante cualquier anomalía o reajuste de costos en los frentes de obra, el flujo se extiende (<code>&lt;&lt;extend&gt;&gt;</code>) condicionalmente hacia <span style="color: #E63946"><strong>CUN3: Validar Presupuesto</strong></span>, subproceso que depende directamente de que el actor de negocio <span style="color: #2A4158"><strong>AN2: Gerente</strong></span> ejecute la acción de <span style="color: #E63946"><strong>CUN5: Autorizar Presupuesto extra</strong></span>.</li>
                     </ul>
                                 </div>
                             </div>
@@ -798,8 +818,8 @@
                                 <div class="accordion-body">
                                     <p><strong>Explicación en el Diagrama:</strong> Este objetivo asegura el control estricto de los movimientos internos de materiales, garantizando que ningún insumo salga del almacén central sin dejar rastro digital:</p>
                                     <ul>
-                                        <li>El actor de negocio <span class="text-success"><strong>AN3: Empleado</strong></span> (frente de obra) inicia la interacción al ejecutar el proceso <span class="text-info"><strong>CUN6: Solicitar Insumos</strong></span>.</li>
-                                        <li>El actor de negocio <span class="text-success"><strong>AN4: Encargado de Almacén</strong></span> procesa esto a través del nodo central <span class="text-info"><strong>CUN7: Despachar Materiales de Obra</strong></span>, el cual incluye obligatoriamente (<code>&lt;&lt;include&gt;&gt;</code>) la tarea de <span class="text-info"><strong>CUN8: Verificar existencias</strong></span> en el sistema digital antes de proceder físicamente a <span class="text-info"><strong>CUN9: Realizar Entrega de Materiales</strong></span>.</li>
+                                        <li>El actor de negocio <span style="color: #2A4158"><strong>AN3: Empleado</strong></span> (frente de obra) inicia la interacción al ejecutar el proceso <span style="color: #E63946"><strong>CUN6: Solicitar Insumos</strong></span>.</li>
+                                        <li>El actor de negocio <span style="color: #2A4158"><strong>AN4: Encargado de Almacén</strong></span> procesa esto a través del nodo central <span style="color: #E63946"><strong>CUN7: Despachar Materiales de Obra</strong></span>, el cual incluye obligatoriamente (<code>&lt;&lt;include&gt;&gt;</code>) la tarea de <span style="color: #E63946"><strong>CUN8: Verificar existencias</strong></span> en el sistema digital antes de proceder físicamente a <span style="color: #E63946"><strong>CUN9: Realizar Entrega de Materiales</strong></span>.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -815,8 +835,8 @@
                                 <div class="accordion-body">
                                     <p><strong>Explicación en el Diagrama:</strong> Este objetivo actúa como la capa de seguridad operativa e inventario real del proyecto, resolviendo pérdidas por descuido o averías:</p>
                                     <ul>
-                                        <li>El proceso de auditoría continua <span class="text-info"><strong>CUN10: Gestionar Inventario</strong></span> fuerza la ejecución de <span class="text-info"><strong>CUN8: Verificar existencias</strong></span>. Si se detecta un desfase físico o lógico, se dispara una extensión (<code>&lt;&lt;extend&gt;&gt;</code>) para <span class="text-info"><strong>CUN11: Reportar faltante de Stock</strong></span> y coordinar la compra oportuna mediante <span class="text-info"><strong>CUN12: Gestionar Reposición de Stock<</strong>/span>.</li>
-                                        <li>Regla de Negocio para Maquinaria: Cuando el actor <span class="text-success"><strong>AN3: Empleado</strong></span> detecta un desperfecto físico, el proceso <span class="text-info"><strong>CUN13: Reportar Maquinaria Averiada</strong></span> extiende condicionalmente (<code>&lt;&lt;extend&gt;&gt;</code>) el flujo ordinario de entrega, forzando la inclusión obligatoria (<code>&lt;&lt;include&gt;&gt;</code>) de la acción <span class="text-info"><strong>CUN14: Enviar a Mantenimiento</strong></span> para bloquear su uso.</li>
+                                        <li>El proceso de auditoría continua <span style="color: #E63946"><strong>CUN10: Gestionar Inventario</strong></span> fuerza la ejecución de <span style="color: #E63946"><strong>CUN8: Verificar existencias</strong></span>. Si se detecta un desfase físico o lógico, se dispara una extensión (<code>&lt;&lt;extend&gt;&gt;</code>) para <span style="color: #E63946"><strong>CUN11: Reportar faltante de Stock</strong></span> y coordinar la compra oportuna mediante <span style="color: #E63946"><strong>CUN12: Gestionar Reposición de Stock<</strong>/span>.</li>
+                                        <li>Regla de Negocio para Maquinaria: Cuando el actor <span style="color: #2A4158"><strong>AN3: Empleado</strong></span> detecta un desperfecto físico, el proceso <span style="color: #E63946"><strong>CUN13: Reportar Maquinaria Averiada</strong></span> extiende condicionalmente (<code>&lt;&lt;extend&gt;&gt;</code>) el flujo ordinario de entrega, forzando la inclusión obligatoria (<code>&lt;&lt;include&gt;&gt;</code>) de la acción <span style="color: #E63946"><strong>CUN14: Enviar a Mantenimiento</strong></span> para bloquear su uso.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -826,9 +846,9 @@
                 </section>
                 <!-- Caso de Uso Expandido -->
                 <section id="caso-expandido" class="mb-5 scroll-margin">
-                    <h2 class="fw-bold text-primary mb-3">Casos de Uso Expandido</h2>
+                    <h2 class="fw-bold fw-bold" style="color: #E63946 mb-3">Casos de Uso Expandido</h2>
                     <p>Es un documento narrativo que describe la secuencia de eventos de un actor que utiliza un sistema para completar un proceso. Son historias o casos de utilización de un sistema; no son exactamente los requerimientos ni las especificaciones funcionales, sino que ejemplifican e incluyen los requerimientos.</p>
-                    <div class="card border-left border-primary border-4">
+                    <div class="card border-left border-1" style="border-color: #E63946 border-4">
                         <div class="card-body">
                             <h6 class="fw-bold">Definición</h6>
                             <p class="mb-0">Muestra más detalles que uno de alto nivel; suelen ser útiles para alcanzar un conocimiento más profundo de los procesos y de los requerimientos.</p>
@@ -837,11 +857,11 @@
 
                     <!-- CU-01: GESTIÓN DE ABASTECIMIENTO Y COMPRAS -->
                     <div class="card border-0 shadow-sm mb-4 mt-4">
-                        <div class="card-header bg-primary text-white py-3">
+                        <div class="card-header bg-primary" style="background-color: #E63946 text-white py-3">
                             <h5 class="mb-0">CU-01 — MÓDULO 1: GESTIÓN DE ABASTECIMIENTO Y COMPRAS</h5>
                         </div>
                         <div class="card-body">
-                            <h6 class="fw-bold text-primary mb-3">Caso de Uso: Generar orden de compra</h6>
+                            <h6 class="fw-bold fw-bold" style="color: #E63946 mb-3">Caso de Uso: Generar orden de compra</h6>
                             <div class="table-responsive">
                                 <table class="table table-sm">
                                     <tbody>
@@ -881,7 +901,7 @@
                                 </table>
                             </div>
                             
-                            <h6 class="fw-bold mt-3 text-warning">Secuencia Normal de Eventos</h6>
+                            <h6 class="fw-bold mt-3 fw-bold" style="color: #2A4158">Secuencia Normal de Eventos</h6>
                             <div class="table-responsive mt-2">
                                 <table class="table table-bordered">
                                     <thead class="table-light">
@@ -942,7 +962,7 @@
                             <h5 class="mb-0">CU-02 — MÓDULO 2: SOLICITUD DE MATERIALES Y DESPACHO A OBRA</h5>
                         </div>
                         <div class="card-body">
-                            <h6 class="fw-bold text-success mb-3">Caso de Uso: Solicitar material desde obra</h6>
+                            <h6 class="fw-bold fw-bold" style="color: #2A4158 mb-3">Caso de Uso: Solicitar material desde obra</h6>
                             <div class="table-responsive">
                                 <table class="table table-sm">
                                     <tbody>
@@ -982,7 +1002,7 @@
                                 </table>
                             </div>
 
-                            <h6 class="fw-bold mt-3 text-warning">Secuencia Normal de Eventos</h6>
+                            <h6 class="fw-bold mt-3 fw-bold" style="color: #2A4158">Secuencia Normal de Eventos</h6>
                             <div class="table-responsive mt-2">
                                 <table class="table table-bordered">
                                     <thead class="table-light">
@@ -1035,11 +1055,11 @@
 
                     <!-- CU-03: CONTROL DE INVENTARIO Y MOVIMIENTOS DE ALMACÉN -->
                     <div class="card border-0 shadow-sm mb-4">
-                        <div class="card-header bg-info text-white py-3">
+                        <div class="card-header bg-info" style="background-color: #E63946 text-white py-3">
                             <h5 class="mb-0">CU-03 — MÓDULO 3: CONTROL DE INVENTARIO Y MOVIMIENTOS DE ALMACÉN</h5>
                         </div>
                         <div class="card-body">
-                            <h6 class="fw-bold text-info mb-3">Caso de Uso: Realizar conteos y control de inventario</h6>
+                            <h6 class="fw-bold fw-bold" style="color: #E63946 mb-3">Caso de Uso: Realizar conteos y control de inventario</h6>
                             <div class="table-responsive">
                                 <table class="table table-sm">
                                     <tbody>
@@ -1079,7 +1099,7 @@
                                 </table>
                             </div>
 
-                            <h6 class="fw-bold mt-3 text-warning">Secuencia Normal de Eventos</h6>
+                            <h6 class="fw-bold mt-3 fw-bold" style="color: #2A4158">Secuencia Normal de Eventos</h6>
                             <div class="table-responsive mt-2">
                                 <table class="table table-bordered">
                                     <thead class="table-light">
@@ -1136,11 +1156,11 @@
 
                     <!-- CU-04: GESTIÓN DE OBRAS Y SEGUIMIENTO DE RECURSOS -->
                     <div class="card border-0 shadow-sm mb-4">
-                        <div class="card-header bg-warning text-dark py-3">
+                        <div class="card-header bg-warning" style="background-color: #2A4158 text-dark py-3">
                             <h5 class="mb-0">CU-04 — MÓDULO 4: GESTIÓN DE OBRAS Y SEGUIMIENTO DE RECURSOS</h5>
                         </div>
                         <div class="card-body">
-                            <h6 class="fw-bold text-warning mb-3">Caso de Uso: Registrar obra y seguimiento de recursos</h6>
+                            <h6 class="fw-bold fw-bold" style="color: #2A4158 mb-3">Caso de Uso: Registrar obra y seguimiento de recursos</h6>
                             <div class="table-responsive">
                                 <table class="table table-sm">
                                     <tbody>
@@ -1180,7 +1200,7 @@
                                 </table>
                             </div>
 
-                            <h6 class="fw-bold mt-3 text-warning">Secuencia Normal de Eventos</h6>
+                            <h6 class="fw-bold mt-3 fw-bold" style="color: #2A4158">Secuencia Normal de Eventos</h6>
                             <div class="table-responsive mt-2">
                                 <table class="table table-bordered">
                                     <thead class="table-light">
@@ -1277,7 +1297,7 @@
                                 </table>
                             </div>
 
-                            <h6 class="fw-bold mt-3 text-warning">Secuencia Normal de Eventos (Resumida)</h6>
+                            <h6 class="fw-bold mt-3 fw-bold" style="color: #2A4158">Secuencia Normal de Eventos (Resumida)</h6>
                             <ul class="small">
                                 <li>Recursos Humanos accede al módulo de personal y registra al nuevo empleado (CI, nombre, teléfono, correo, tipo de contrato, salario)</li>
                                 <li>Sistema registra empleado y asigna especialidad (albañil, electricista, plomero, soldador, etc.)</li>
@@ -1345,7 +1365,7 @@
                                 </table>
                             </div>
 
-                            <h6 class="fw-bold mt-3 text-warning">Secuencia Normal de Eventos (Resumida)</h6>
+                            <h6 class="fw-bold mt-3 fw-bold" style="color: #2A4158">Secuencia Normal de Eventos (Resumida)</h6>
                             <ul class="small">
                                 <li>El Administrador de obra registra la maquinaria disponible (pesada, eléctrica, manual; propio o alquilado)</li>
                                 <li>El Administrador asigna la maquinaria a una obra según la fase del cronograma</li>
@@ -1368,7 +1388,7 @@
                     </div>
 
                     <!-- Resumen Final -->
-                    <div class="alert alert-info border-left border-4 border-primary mt-5" role="alert">
+                    <div class="alert alert-info border-left border-4 border-1" style="border-color: #E63946 mt-5" role="alert">
                         <h6 class="fw-bold mb-2">Documento de Referencia</h6>
                         <p class="small mb-0"><strong>Constructora Ríos Herrera — Casos de Uso Expandido v1.1</strong> | Sistema de gestión de almacenes y control de inventarios | Versión 1.1 | Fecha: 08/06/2026</p>
                     </div>
@@ -1378,7 +1398,7 @@
     </div>
 
     <!-- FOOTER -->
-    <footer class="bg-primary text-white py-5 mt-5">
+    <footer class="bg-white" style="background-color: #E63946 text-white py-5 mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
@@ -1412,7 +1432,7 @@
                 </div>
             </div>
             <hr class="bg-white">
-            <p class="text-center mb-0 small">&copy; 2024 Constructora Ríos Herrera. Todos los derechos reservados.</p>
+            <p class="text-center mb-0 small">&copy; 2026 Constructora Ríos Herrera. Todos los derechos reservados.</p>
         </div>
     </footer>
 

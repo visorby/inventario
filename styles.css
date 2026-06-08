@@ -1,10 +1,16 @@
 /* Variables de Color */
 :root {
-    --primary-blue: #1f3a93;
-    --primary-orange: #ff8c00;
-    --dark-gray: #333;
+    --primary-red: #E63946;
+    --primary-dark: #2A4158;
+    --red-dark: #D62828;
     --light-gray: #f5f5f5;
+    --medium-gray: #e8e8e8;
+    --dark-gray: #333;
     --white: #ffffff;
+    --primary-orange: #FF9F1C;
+    --primary-blue: #E63946;
+    --accent-teal: #06A77D;
+    --accent-purple: #8E44AD;
 }
 
 * {
@@ -40,7 +46,7 @@ body {
 }
 
 .navbar-nav .nav-link:hover {
-    color: var(--primary-orange) !important;
+    color: var(--primary-red) !important;
 }
 
 .navbar-nav .dropdown-menu {
@@ -53,13 +59,22 @@ body {
 }
 
 .navbar-nav .dropdown-menu .dropdown-item:hover {
-    background-color: var(--primary-orange);
+    background-color: var(--primary-red);
     color: var(--white);
 }
 
 /* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #E63946 0%, #D62828 100%) !important;
+    color: var(--white);
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
 .hero-section {
-    background: linear-gradient(135deg, var(--primary-blue) 0%, #2d5aa6 100%);
+    background: linear-gradient(135deg, #E63946 0%, #D62828 100%);
     color: var(--white);
     padding: 80px 0;
     text-align: center;
@@ -106,7 +121,7 @@ body {
 /* Logo */
 .logo-header {
     font-size: 2.5rem;
-    color: var(--primary-orange);
+    color: var(--primary-red);
     font-weight: bold;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
@@ -121,7 +136,7 @@ body {
 .description-section h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
-    color: var(--primary-blue);
+    color: var(--primary-red);
 }
 
 .description-section p {
@@ -134,7 +149,7 @@ body {
 
 /* Blog Section */
 .blog-section {
-    background-color: var(--light-gray);
+    background-color: var(--white);
     padding: 80px 0;
 }
 
@@ -142,7 +157,7 @@ body {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 60px;
-    color: var(--dark-gray);
+    color: var(--primary-red);
     font-weight: bold;
 }
 
@@ -158,12 +173,14 @@ body {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 2px solid transparent;
 }
 
 .blog-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(230, 57, 70, 0.2);
+    border-color: var(--primary-orange);
 }
 
 .blog-card-image {
@@ -201,7 +218,7 @@ body {
 }
 
 .leer-mas {
-    color: var(--primary-blue);
+    color: var(--primary-red);
     text-decoration: underline;
     font-weight: 600;
     cursor: pointer;
@@ -209,7 +226,7 @@ body {
 }
 
 .leer-mas:hover {
-    color: var(--primary-orange);
+    color: var(--red-dark);
 }
 
 /* Content Section */
@@ -219,13 +236,13 @@ body {
 }
 
 .content-section h1 {
-    color: var(--primary-blue);
+    color: var(--primary-red);
     margin-bottom: 30px;
     font-size: 2.5rem;
 }
 
 .content-section h2 {
-    color: var(--primary-blue);
+    color: var(--primary-red);
     margin: 30px 0 20px 0;
     font-size: 1.8rem;
 }
@@ -239,7 +256,7 @@ body {
 
 /* Footer */
 footer {
-    background-color: var(--dark-gray);
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #1a2a38 100%);
     color: var(--white);
     padding: 40px 0;
     margin-top: 80px;
@@ -260,13 +277,13 @@ footer ul li {
 }
 
 footer ul li a {
-    color: #bbb;
+    color: #d0d0d0;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 footer ul li a:hover {
-    color: var(--primary-orange);
+    color: var(--primary-red);
 }
 
 .footer-bottom {
@@ -278,9 +295,10 @@ footer ul li a:hover {
 
 /* Breadcrumb */
 .breadcrumb-section {
-    background-color: var(--light-gray);
+    background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
     padding: 20px 0;
     margin-bottom: 40px;
+    border-bottom: 2px solid var(--primary-orange);
 }
 
 .breadcrumb {
@@ -290,8 +308,17 @@ footer ul li a:hover {
 }
 
 .breadcrumb-item.active {
-    color: var(--primary-blue);
+    color: var(--primary-red);
     font-weight: 600;
+}
+
+.breadcrumb-item a {
+    color: var(--primary-orange);
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-item a:hover {
+    color: var(--primary-red);
 }
 
 /* Responsive */
@@ -338,25 +365,26 @@ footer ul li a:hover {
 }
 
 .form-control:focus {
-    border-color: var(--primary-orange);
-    box-shadow: 0 0 5px rgba(255, 140, 0, 0.3);
+    border-color: var(--primary-red);
+    box-shadow: 0 0 8px rgba(230, 57, 70, 0.4);
 }
 
 .btn-submit {
-    background-color: var(--primary-orange);
+    background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-orange) 100%);
     color: var(--white);
     padding: 12px 30px;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
 }
 
 .btn-submit:hover {
-    background-color: #e07b00;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(230, 57, 70, 0.3);
 }
 
 /* Scroll Margin para Anclas */
@@ -369,10 +397,13 @@ footer ul li a:hover {
     position: sticky;
     top: 80px;
     z-index: 100;
+    border-left: 5px solid var(--primary-orange);
+    background: white;
+    box-shadow: 0 4px 12px rgba(255, 159, 28, 0.1);
 }
 
 .card-body a:hover {
-    color: var(--primary-orange) !important;
+    color: var(--primary-red) !important;
     font-weight: 600;
 }
 
@@ -401,8 +432,135 @@ footer ul li a:hover {
 
 .dropdown-item {
     position: relative;
+    transition: all 0.3s ease;
 }
 
 .dropdown-item:hover {
-    background-color: #f1f1f1;
+    background-color: rgba(255, 159, 28, 0.1);
+    color: var(--primary-red);
+    font-weight: 500;
+}
+
+/* Estilos para cuadros de contenido */
+.card {
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(230, 57, 70, 0.15);
+}
+
+/* Estilos para secciones con bordes coloreados */
+.border-left {
+    border-color: var(--primary-orange) !important;
+}
+
+.border-left.border-4 {
+    border-width: 4px !important;
+}
+
+/* Botones outline con color */
+.btn-outline {
+    border: 2px solid currentColor;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Alertas mejoradas */
+.alert {
+    border-left: 4px solid var(--primary-orange);
+    border-radius: 6px;
+}
+
+.alert-warning {
+    background: linear-gradient(to right, rgba(255, 159, 28, 0.1), transparent);
+    border-color: var(--primary-orange);
+    color: var(--dark-gray);
+}
+
+.alert-info {
+    background: linear-gradient(to right, rgba(230, 57, 70, 0.1), transparent);
+    border-color: var(--primary-red);
+    color: var(--dark-gray);
+}
+
+/* Títulos mejorados */
+h1, h2, h3, h4, h5, h6 {
+    transition: color 0.3s ease;
+}
+
+h2 {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary-orange), var(--primary-red));
+    border-radius: 2px;
+}
+
+/* Mejoras visuales para secciones */
+section {
+    position: relative;
+}
+
+/* Estilos para descripción sections */
+.description-section {
+    background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+}
+
+/* Sección de Autores */
+.authors-section {
+    background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+    padding: 60px 0;
+}
+
+.author-card {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+    border-left: 4px solid var(--primary-orange);
+    background: white;
+}
+
+.author-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(255, 159, 28, 0.2) !important;
+    border-left-color: var(--primary-red);
+}
+
+.author-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-red) 100%);
+}
+
+.author-card h5 {
+    color: var(--primary-red);
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.author-card .text-muted {
+    color: #888 !important;
+    font-weight: 500;
 }

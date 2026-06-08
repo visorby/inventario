@@ -11,9 +11,10 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">
-                <span class="text-primary">Ríos</span>
-                <span class="text-warning">Herrera</span>
+            <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+                <img src="public/img/logoEmpresaCons.jpeg" alt="Logo Ríos Herrera" style="max-height: 40px; max-width: 40px;">
+                <span style="color: #E63946">Ríos</span>
+                <span style="color: #2A4158">Herrera</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -38,9 +39,28 @@
                             Análisis Estructurado
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="analisisDropdown">
-                            <li><a class="dropdown-item" href="analisis-estructurado.html#declaracion">Declaración de Propósitos</a></li>
-                            <li><a class="dropdown-item" href="analisis-estructurado.html#diagrama">Diagrama de Contexto</a></li>
-                            <li><a class="dropdown-item" href="analisis-estructurado.html#eventos">Lista de Eventos</a></li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#" id="modeloAmbientalDropdown" role="button" data-bs-toggle="dropdown">
+                                    Modelo Ambiental
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="modeloAmbientalDropdown">
+                                    <li><a class="dropdown-item" href="analisis-estructurado.html#declaracion">Declaración de Propósitos</a></li>
+                                    <li><a class="dropdown-item" href="analisis-estructurado.html#diagrama">Diagrama de Contexto</a></li>
+                                    <li><a class="dropdown-item" href="analisis-estructurado.html#eventos">Lista de Eventos</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#" id="modeloComportamientoDropdown" role="button" data-bs-toggle="dropdown">
+                                    Modelo de Comportamiento
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="modeloComportamientoDropdown">
+                                    <li><a class="dropdown-item" href="analisis-estructurado.html#nivel0">Nivel Cero</a></li>
+                                    <li><a class="dropdown-item" href="analisis-estructurado.html#nivel1">Nivel 1</a></li>
+                                    <li><a class="dropdown-item" href="analisis-estructurado.html#nivel2">Nivel 2</a></li>
+                                    <li><a class="dropdown-item" href="analisis-estructurado.html#nivel2-proceso2">Nivel 2 - Proceso 2.0</a></li>
+                                    <li><a class="dropdown-item" href="analisis-estructurado.html#planificacion">Planificación de Actividades</a></li>
+                                </ul>
+                            </li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="modelo-er.html">Modelo ER</a></li>
                             <li><a class="dropdown-item" href="diagrama-procesos.html">Diagrama de Procesos</a></li>
@@ -84,28 +104,28 @@
 
     <!-- CONTENIDO -->
     <div class="container py-5">
-        <h1 class="fw-bold text-primary mb-5">Programación Orientada a Objetos (POO) y Diagrama de Clases</h1>
+        <h1 class="fw-bold fw-bold" style="color: #E63946 mb-5">Programación Orientada a Objetos (POO) y Diagrama de Clases</h1>
 
         <section id="poo" class="mb-5">
-            <h2 class="fw-bold text-primary mb-3">Programación Orientada a Objetos (POO)</h2>
+            <h2 class="fw-bold fw-bold" style="color: #E63946 mb-3">Programación Orientada a Objetos (POO)</h2>
             <p>La Programación Orientada a Objetos es un paradigma de desarrollo de software que organiza el diseño del sistema alrededor de "objetos" en lugar de funciones aisladas. Este enfoque permite modelar elementos del mundo real, transformándolos en componentes de software modulares y altamente reutilizables.</p>
             <p>Para lograrlo, el paradigma se estructura sobre cuatro pilares fundamentales que guían la arquitectura del código: la abstracción, el encapsulamiento, la herencia y el polimorfismo.</p>
         </section>
 
         <section id="diagrama-clases" class="mb-5">
-            <h2 class="fw-bold text-primary mb-3">Diagrama de Clases</h2>
+            <h2 class="fw-bold fw-bold" style="color: #E63946 mb-3">Diagrama de Clases</h2>
             <p>El Diagrama de Clases es una herramienta gráfica del Lenguaje de Modelado Unificado (UML) que representa la estructura estática de un sistema informático. Este modelo visual especifica las clases que formarán el sistema, detallando sus atributos internos, sus métodos o funciones operativas, y la manera exacta en que los objetos se relacionan e interactúan entre sí.</p>
             <p>Cada clase se dibuja como un bloque dividido en tres secciones superpuestas: el nombre de la entidad, la lista de variables o propiedades, y el conjunto de acciones que puede ejecutar. El verdadero potencial del diagrama radica en plasmar las conexiones lógicas del negocio, tales como la herencia, la asociación, la agregación y la composición, sirviendo como el plano arquitectónico definitivo antes de proceder con la fase de codificación.</p>
         </section>
 
         <section id="conceptos" class="mb-5">
-            <h2 class="fw-bold text-primary mb-3">Conceptos Fundamentales</h2>
+            <h2 class="fw-bold fw-bold" style="color: #E63946 mb-3">Conceptos Fundamentales</h2>
             
             <div class="row g-4">
                 <div class="col-md-6">
                     <div class="card border-0 shadow-sm">
                         <div class="card-body">
-                            <h5 class="card-title text-primary">Clases</h5>
+                            <h5 class="card-title fw-bold" style="color: #E63946">Clases</h5>
                             <p class="card-text">Una clase es una plantilla o molde para crear objetos con propiedades y comportamientos definidos.</p>
                         </div>
                     </div>
@@ -113,7 +133,7 @@
                 <div class="col-md-6">
                     <div class="card border-0 shadow-sm">
                         <div class="card-body">
-                            <h5 class="card-title text-primary">Objetos</h5>
+                            <h5 class="card-title fw-bold" style="color: #E63946">Objetos</h5>
                             <p class="card-text">Los objetos son instancias de una clase que poseen atributos y pueden ejecutar métodos.</p>
                         </div>
                     </div>
@@ -121,7 +141,7 @@
                 <div class="col-md-6">
                     <div class="card border-0 shadow-sm">
                         <div class="card-body">
-                            <h5 class="card-title text-primary">Atributos</h5>
+                            <h5 class="card-title fw-bold" style="color: #E63946">Atributos</h5>
                             <p class="card-text">Son las características o propiedades que posee un objeto, también llamadas variables o datos miembro.</p>
                         </div>
                     </div>
@@ -129,7 +149,7 @@
                 <div class="col-md-6">
                     <div class="card border-0 shadow-sm">
                         <div class="card-body">
-                            <h5 class="card-title text-primary">Métodos</h5>
+                            <h5 class="card-title fw-bold" style="color: #E63946">Métodos</h5>
                             <p class="card-text">Son las acciones o comportamientos que pueden ejecutar los objetos de una clase, representados mediante funciones.</p>
                         </div>
                     </div>
@@ -138,7 +158,7 @@
         </section>
 
         <section id="principios" class="mb-5">
-            <h2 class="fw-bold text-primary mb-3">Principios de OOP</h2>
+            <h2 class="fw-bold fw-bold" style="color: #E63946 mb-3">Principios de OOP</h2>
             
             <div class="accordion" id="accordionOOP">
                 <div class="accordion-item">
@@ -193,7 +213,7 @@
         </section>
 
         <section id="diagrama-clases-ejemplo" class="mb-5">
-            <h2 class="fw-bold text-primary mb-3">Diagrama de Clases</h2>
+            <h2 class="fw-bold fw-bold" style="color: #E63946 mb-3">Diagrama de Clases</h2>
             <p>En el contexto de nuestro sistema de gestión de almacenes, la estructura lógica y las relaciones entre los componentes se representan mediante el siguiente diagrama:</p>
             
             <div class="text-center mb-4">
