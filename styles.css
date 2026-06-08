@@ -406,3 +406,44 @@ footer ul li a:hover {
 .dropdown-item:hover {
     background-color: #f1f1f1;
 }
+
+/* Sección de Autores */
+.authors-section {
+    background-color: var(--light-gray);
+    padding: 60px 0;
+}
+
+.author-card {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.author-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15) !important;
+}
+
+.author-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.author-card h5 {
+    color: var(--primary-blue);
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.author-card .text-muted {
+    color: #888 !important;
+    font-weight: 500;
+}
