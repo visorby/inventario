@@ -14,9 +14,10 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">
-                <span class="text-primary">Ríos</span>
-                <span class="text-warning">Herrera</span>
+            <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+                <img src="public/img/logoEmpresaCons.jpeg" alt="Logo Ríos Herrera" style="max-height: 40px; max-width: 40px;">
+                <span style="color: #E63946">Ríos</span>
+                <span style="color: #2A4158">Herrera</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -121,7 +122,7 @@
             <div class="col-lg-3">
                 <div class="card shadow-sm border-0 sticky-top" style="top: 80px;">
                     <div class="card-body">
-                        <h6 class="card-title fw-bold text-primary mb-3">ÍNDICE</h6>
+                        <h6 class="card-title fw-bold fw-bold" style="color: #E63946 mb-3">ÍNDICE</h6>
                         <ul class="list-unstyled">
                             <li class="mb-2"><a href="#declaracion" class="text-decoration-none text-dark small">1. Declaración de Propósitos</a></li>
                             <li class="mb-2"><a href="#diagrama" class="text-decoration-none text-dark small">2. Diagrama de Contexto</a></li>
@@ -140,8 +141,8 @@
            
             <div class="col-lg-9">
                 <section id="declaracion" class="mb-5 scroll-margin">
-                    <h2 class="fw-bold text-primary mb-3">Declaración de Propósitos</h2>
-                        <p>Realizar un sistema de gestión de almacén e inventarios para la constructora Ríos Herrera bajo el modelo ambiental, que registre los movimientos de materiales, controle el stock disponible, gestione las solicitudes y despachos a obra, y permita llevar el seguimiento de compras, personal y maquinaria dentro de la empresa.</p>                    <div class="card border-start border-primary border-4 shadow-sm">
+                    <h2 class="fw-bold fw-bold" style="color: #E63946 mb-3">Declaración de Propósitos</h2>
+                        <p>Realizar un sistema de gestión de almacén e inventarios para la constructora Ríos Herrera bajo el modelo ambiental, que registre los movimientos de materiales, controle el stock disponible, gestione las solicitudes y despachos a obra, y permita llevar el seguimiento de compras, personal y maquinaria dentro de la empresa.</p>                    <div class="card border-start border-1" style="border-color: #E63946 border-4 shadow-sm">
                         
                             <div class="card-body">
                                 <h6 class="fw-bold">Propósito Principal</h6>
@@ -165,7 +166,7 @@
 
                 
                 <section id="diagrama" class="mb-5 scroll-margin">
-                    <h2 class="fw-bold text-primary mb-3">Diagrama de Contexto</h2>
+                    <h2 class="fw-bold fw-bold" style="color: #E63946 mb-3">Diagrama de Contexto</h2>
                     <p>El Diagrama de Contexto representa el <strong>Modelo Ambiental Nivel 0</strong> del sistema. Muestra el sistema como una caja negra central — el <em>Sistema de Gestión de Almacén e Inventarios Ríos Herrera</em> — rodeado de todos los actores externos (entidades terminadoras) que interactúan con él mediante flujos de datos de entrada y salida.</p>
                     <img src="public/img/modeloAmbiental/Modelo Ambiental.drawio.png" alt="Diagrama de Contexto - Modelo Ambiental Nivel 0" class="img-fluid rounded shadow-sm mb-4 border">
                     <p>Los actores externos identificados y sus interacciones principales son:</p>
@@ -182,7 +183,7 @@
                 </section>
 
                 <section id="eventos" class="mb-5 scroll-margin">
-                    <h2 class="fw-bold text-primary mb-3">Lista de Eventos</h2>
+                    <h2 class="fw-bold fw-bold" style="color: #E63946 mb-3">Lista de Eventos</h2>
                     <p>Los eventos son estímulos externos que provocan una reacción del sistema. A continuación se listan los principales eventos identificados, el actor que los origina y la respuesta esperada del sistema:</p>
                     <div class="table-responsive">
                         <table class="table table-hover table-bordered align-middle">
@@ -274,13 +275,13 @@
 
                 
                 <section id="modelo-ambiental" class="mb-5 scroll-margin">
-                    <h2 class="fw-bold text-primary mb-3">Modelo Ambiental</h2>
+                    <h2 class="fw-bold fw-bold" style="color: #E63946 mb-3">Modelo Ambiental</h2>
                     <p>El Modelo Ambiental describe el entorno en el que opera el sistema mediante diagramas de flujo de datos (DFD) en distintos niveles de abstracción. Cada nivel descompone los procesos del nivel anterior, detallando progresivamente las funciones, actores y almacenes de datos involucrados.</p>
                 </section>
 
                 
                 <section id="nivel0" class="mb-5 scroll-margin">
-                    <h3 class="fw-bold mb-3" style="color:#0d6efd;">Nivel 0 – Diagrama de Contexto</h3>
+                    <h3 class="fw-bold mb-3" style="color:#E63946;">Nivel 0 – Diagrama de Contexto</h3>
                     <p>El <strong>Nivel 0</strong> (también llamado Diagrama de Contexto) representa el sistema como una única burbuja central: el <em>Sistema de Gestión de Almacén e Inventarios Ríos Herrera</em>. En este nivel solo se identifican las entidades externas y los flujos de información de alto nivel que entran y salen del sistema, sin descomponer ningún proceso interno.</p>
                     <div class="card shadow-sm border-0 mb-3">
                         <div class="card-body text-center p-2">
@@ -292,7 +293,7 @@
 
                 
                 <section id="nivel1" class="mb-5 scroll-margin">
-                    <h3 class="fw-bold mb-3" style="color:#0d6efd;">Nivel 1 – Procesos Principales</h3>
+                    <h3 class="fw-bold mb-3" style="color:#E63946;">Nivel 1 – Procesos Principales</h3>
                     <p>El <strong>Nivel 1</strong> descompone el sistema central en sus <strong>seis macroprocesos</strong> principales, mostrando cómo interactúan entre sí, con los actores externos y con los almacenes de datos compartidos. Este nivel da visibilidad al flujo de información entre áreas funcionales del sistema.</p>
                     <div class="card shadow-sm border-0 mb-3">
                         <div class="card-body text-center p-2">
@@ -319,7 +320,7 @@
 
                 
                 <section id="nivel2" class="mb-5 scroll-margin">
-                    <h3 class="fw-bold mb-3" style="color:#0d6efd;">Nivel 2 – Control de Inventarios y Movimientos</h3>
+                    <h3 class="fw-bold mb-3" style="color:#E63946;">Nivel 2 – Control de Inventarios y Movimientos</h3>
                     <p>El <strong>Nivel 2</strong> descompone el proceso <strong>3.0 – Control de Inventarios y Movimientos</strong> en sus subprocesos internos. Este nivel muestra en detalle cómo se consulta disponibilidad, se realizan conteos físicos, se actualiza el stock, se concilian diferencias, se actualizan precios y se generan alertas y reportes.</p>
                     <div class="card shadow-sm border-0 mb-3">
                         <div class="card-body text-center p-2">
@@ -340,7 +341,7 @@
 
                 
                 <section id="nivel2-proceso" class="mb-5 scroll-margin">
-                    <h3 class="fw-bold mb-3" style="color:#0d6efd;">Nivel 2 – Proceso 2.0: Solicitud de Materiales y Despacho a Obra</h3>
+                    <h3 class="fw-bold mb-3" style="color:#E63946;">Nivel 2 – Proceso 2.0: Solicitud de Materiales y Despacho a Obra</h3>
                     <p>Este diagrama descompone el proceso <strong>2.0 – Solicitud de Materiales y Despacho a Obra</strong>. Describe el flujo completo desde que el Ingeniero solicita materiales para una obra hasta que los materiales son entregados, asignados en el KARDEX y el pedido queda cerrado.</p>
                     <div class="card shadow-sm border-0 mb-3">
                         <div class="card-body text-center p-2">
@@ -360,7 +361,7 @@
 
                 
                 <section id="planificacion" class="mb-5 scroll-margin">
-                    <h2 class="fw-bold text-primary mb-3">Planificación de Actividades</h2>
+                    <h2 class="fw-bold fw-bold" style="color: #E63946 mb-3">Planificación de Actividades</h2>
                     <p>La planificación de actividades establece la distribución cronológica de las tareas previstas para el desarrollo del presente proyecto informático, comprendiendo el período de abril al 8 de junio de 2026. Las actividades se organizan de forma secuencial siguiendo las fases: análisis y relevamiento de requerimientos, modelado del sistema mediante diagramas UML y Modelo Ambiental, diseño de la base de datos a través del Modelo Entidad-Relación, y la construcción e integración del blog informático como producto de presentación del proyecto. Como hito principal se establece la firma y aceptación formal de requerimientos, documento que formaliza el acuerdo entre el equipo de desarrollo y el cliente respecto al alcance y funcionalidades del sistema a desarrollar.</p>
 
                     <div class="table-responsive mt-4">
@@ -451,7 +452,7 @@
                                     <td>8</td>
                                     <td class="text-start">Diagrama de procesos</td>
                                     <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-                                    <td style="background:#ff9800;"></td>
+                                    <td style="background:#E63946;"></td>
                                     <td></td>
                                     <td></td><td></td><td></td>
                                 </tr>
@@ -460,7 +461,7 @@
                                     <td>9</td>
                                     <td class="text-start">Diagramas CUS y MACUN</td>
                                     <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-                                    <td style="background:#ff9800;"></td>
+                                    <td style="background:#E63946;"></td>
                                     <td></td>
                                     <td></td><td></td>
                                 </tr>
@@ -469,7 +470,7 @@
                                     <td>10</td>
                                     <td class="text-start">Casos de uso expandidos</td>
                                     <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-                                    <td style="background:#ff9800;"></td>
+                                    <td style="background:#E63946;"></td>
                                     <td></td>
                                     <td></td>
                                 </tr>
@@ -511,7 +512,7 @@
                             <small>Modelado UML / MER / Ambiental</small>
                         </div>
                         <div class="d-flex align-items-center gap-2">
-                            <div style="width:20px;height:20px;background:#ff9800;border:1px solid #ccc;border-radius:3px;"></div>
+                            <div style="width:20px;height:20px;background:#E63946;border:1px solid #ccc;border-radius:3px;"></div>
                             <small>Diagramas de procesos y casos de uso</small>
                         </div>
                         <div class="d-flex align-items-center gap-2">
@@ -546,7 +547,7 @@
                     </ul>
                 </div>
                 <div class="col-md-3">
-                    <h6 class="fw-bold mb-3">Informaci��n</h6>
+                    <h6 class="fw-bold mb-3">Información</h6>
                     <ul class="list-unstyled">
                         <li><a href="orientado-objetos.html" class="text-white text-decoration-none">OOP</a></li>
                         <li><a href="videos.html" class="text-white text-decoration-none">Videos</a></li>
@@ -572,7 +573,7 @@
             </div>
             <hr class="bg-secondary">
             <div class="text-center">
-                <p class="mb-0">&copy; 2024 Constructora Ríos Herrera. Todos los derechos reservados.</p>
+                <p class="mb-0">&copy; 2026 Constructora Ríos Herrera. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
